@@ -7,17 +7,17 @@ const Nav = () => {
   const links = (
     <>
       <li
-        className={`btn h-auto w-auto bg-transparent border-none shadow-none hover:bg-transparent hover:text-[#2AB3FF] text-xl font-medium `}
+        className={`btn h-auto w-auto bg-transparent border-none shadow-none hover:bg-transparent hover:text-[#2AB3FF] text-xl font-medium text-white`}
       >
         <NavLink to={'/'}>Home</NavLink>
       </li>
       <li
-        className={`btn h-auto w-auto bg-transparent border-none shadow-none hover:bg-transparent hover:text-[#2AB3FF] text-xl font-medium `}
+        className={`btn h-auto w-auto bg-transparent border-none shadow-none hover:bg-transparent hover:text-[#2AB3FF] text-xl font-medium text-white`}
       >
         <NavLink to={'/apartment'}>Apartment</NavLink>
       </li>
       <li
-        className={`btn h-auto w-auto bg-transparent border-none shadow-none hover:bg-transparent hover:text-[#2AB3FF] text-xl font-medium `}
+        className={`btn h-auto w-auto bg-transparent border-none shadow-none hover:bg-transparent hover:text-[#2AB3FF] text-xl font-medium text-white`}
       >
         <NavLink to={'/dashboard/users'}>Dashboard</NavLink>
       </li>
@@ -25,9 +25,7 @@ const Nav = () => {
   );
 
   return (
-    <div
-      className={`navbar backdrop-blur-sm relative z-50 container mx-auto h-28`}
-    >
+    <div className="navbar fixed bg-black/[.5] z-50 md:px-14 mx-auto h-28">
       <div className="navbar-start">
         <div data-aos="fade-down" className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -65,12 +63,11 @@ const Nav = () => {
           />
         </Link>
       </div>
-      <div data-aos="fade-down" className="navbar-center hidden lg:flex">
-        <ul className="text-xl font-medium bg-transparent flex items-center">
+      <div data-aos="fade-down" className="navbar-center hidden lg:flex"></div>
+      <div data-aos="fade-left" className="navbar-end">
+        <ul className="text-xl font-medium bg-transparent flex items-center mr-10">
           {links}
         </ul>
-      </div>
-      <div data-aos="fade-left" className="navbar-end">
         {/* {loader ? (
           <div className="flex flex-row-reverse gap-4 items-center">
             <div className="skeleton w-10 h-10 rounded-full shrink-0"></div>
