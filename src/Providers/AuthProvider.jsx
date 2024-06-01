@@ -53,6 +53,27 @@ const AuthProvider = ({ children }) => {
       const userInfo = { email: userEmail };
       setUser(currentUser);
 
+      // if (currentUser) {
+      //   axios
+      //     .post(
+      //       'https://assignment-11-yum-yacht-server.vercel.app/jwt',
+      //       userInfo,
+      //       {
+      //         withCredentials: true,
+      //       }
+      //     )
+      //     .then(res => console.log(res.data));
+      // } else {
+      //   axios
+      //     .post(
+      //       'https://assignment-11-yum-yacht-server.vercel.app/logout',
+      //       userInfo,
+      //       {
+      //         withCredentials: true,
+      //       }
+      //     )
+      //     .then(res => console.log(res.data));
+      // }
       setLoader(false);
     });
     return () => {
