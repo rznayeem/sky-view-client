@@ -5,7 +5,6 @@ import { FaEye, FaEyeSlash, FaGithub } from 'react-icons/fa';
 import Lottie from 'lottie-react';
 import login from '../../assets/login.json';
 import toast from 'react-hot-toast';
-import header from '../../assets/cover.jpg';
 import Cover from '../Shared/Cover/Cover';
 import useAuth from '../../hooks/useAuth';
 
@@ -93,7 +92,7 @@ const Login = () => {
   return (
     <div>
       <div className="">
-        <Cover headerImg={header} path={'Home'} title={'/Login'}></Cover>
+        <Cover headerTitle="Account" path={'Home'} title={'/Login'}></Cover>
         <div className="">
           <div className="container rounded-xl lg:h-[90vh] mx-auto flex flex-col lg:flex-row-reverse">
             <div className="text-center animate__animated animate__slideInLeft lg:w-[50%] lg:text-left">
