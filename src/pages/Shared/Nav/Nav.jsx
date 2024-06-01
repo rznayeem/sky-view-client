@@ -1,8 +1,11 @@
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../../assets/logo.png';
+import useAuth from '../../../hooks/useAuth';
+import { IoPersonSharp } from 'react-icons/io5';
+import { FiLogOut } from 'react-icons/fi';
 
 const Nav = () => {
-  // const { user, logOut, loader } = useContext(AuthContext);
+  const { user, logOut, loader } = useAuth();
   // const location = useLocation();
   const links = (
     <>
@@ -68,7 +71,7 @@ const Nav = () => {
         <ul className="text-xl font-medium bg-transparent flex items-center mr-10">
           {links}
         </ul>
-        {/* {loader ? (
+        {loader ? (
           <div className="flex flex-row-reverse gap-4 items-center">
             <div className="skeleton w-10 h-10 rounded-full shrink-0"></div>
             <div className="flex flex-col gap-4">
@@ -153,7 +156,7 @@ const Nav = () => {
           <Link to={'/login'} className="btn bg-[#ff923e] text-white">
             Login
           </Link>
-        )} */}
+        )}
       </div>
     </div>
   );
