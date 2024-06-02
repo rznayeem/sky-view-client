@@ -18,6 +18,21 @@ const Apartments = () => {
     },
   });
 
+  const handleAgreement = apartment => {
+    const agreementData = {
+      user_name: user?.displayName,
+      email: user?.email,
+      floor: apartment.floor,
+      block_name: apartment.block_name,
+      apartment_no: apartment.apartment_no,
+      rent: apartment.rent,
+      status: 'pending',
+    };
+    axiosSecure
+      .post('/agreement', agreementData)
+      .then(res => console.log(res.data));
+  };
+
   return (
     <div>
       <Cover
