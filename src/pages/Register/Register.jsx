@@ -9,18 +9,14 @@ import toast from 'react-hot-toast';
 import header from '../../assets/cover.jpg';
 import Cover from '../Shared/Cover/Cover';
 import useAuth from '../../hooks/useAuth';
+import useAxiosPublic from '../../hooks/useAxiosPublic';
 
 const Register = () => {
+  const axiosPublic = useAxiosPublic();
   const navigate = useNavigate();
   const { createUser, updateUserData, user, loader } = useAuth();
   const [error, setError] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-
-  // useEffect(() => {
-  //   if (user) {
-  //     navigate('/');
-  //   }
-  // }, [user, navigate]);
 
   const {
     register,
@@ -36,18 +32,12 @@ const Register = () => {
 
     createUser(email, password)
       .then(result => {
-        fetch('https://assignment-11-yum-yacht-server.vercel.app/user', {
-          method: 'POST',
-          headers: {
-            'content-type': 'application/json',
-          },
-          body: JSON.stringify(userData),
-        })
-          .then(res => res.json())
-          .then(data => console.log(data));
         const user = result.user;
         updateUserData(name, photo, email);
         if (user) {
+          axiosPublic
+            .post('/users', userData)
+            .then(res => console.log(res.data));
           toast.success('Account created successfully');
           navigate('/');
         }

@@ -6,7 +6,6 @@ import { FiLogOut } from 'react-icons/fi';
 
 const Nav = () => {
   const { user, logOut, loader } = useAuth();
-  // const location = useLocation();
   const links = (
     <>
       <li

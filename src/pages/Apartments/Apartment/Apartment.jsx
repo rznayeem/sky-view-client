@@ -1,9 +1,8 @@
 import { MdOutlineBed } from 'react-icons/md';
 import { PiBathtub } from 'react-icons/pi';
 import { TfiRuler } from 'react-icons/tfi';
-import { Link } from 'react-router-dom';
 
-const Apartment = ({ apartment }) => {
+const Apartment = ({ apartment, handleAgreement }) => {
   const {
     image,
     floor,
@@ -52,8 +51,11 @@ const Apartment = ({ apartment }) => {
               </div>
             </div>
           </div>
-          <div className="flex flex-1 items-center justify-center">
-            <button className="group relative z-50 h-16 w-full overflow-hidden bg-[#CD8C66] text-xl text-white duration-500">
+          <div className="flex flex-1 items-center justify-center overflow-hidden">
+            <button
+              onClick={() => handleAgreement(apartment)}
+              className="group transition ease-in-out hover:scale-110 relative z-50 h-16 w-full overflow-hidden bg-[#CD8C66] text-xl text-white duration-500"
+            >
               Agreement
               <span className="absolute inset-0 z-10 flex items-center justify-center text-white opacity-0 duration-100 ease-out group-hover:opacity-100 group-hover:duration-1000">
                 Agreement

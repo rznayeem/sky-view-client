@@ -2,9 +2,13 @@ import { useQuery } from '@tanstack/react-query';
 import useAxiosPublic from '../../hooks/useAxiosPublic';
 import Apartment from './Apartment/Apartment';
 import Cover from '../Shared/Cover/Cover';
+import useAuth from '../../hooks/useAuth';
+import useAxiosSecure from '../../hooks/useAxiosSecure';
 
 const Apartments = () => {
   const axiosPublic = useAxiosPublic();
+  const axiosSecure = useAxiosSecure();
+  const { user } = useAuth();
 
   const { refetch, data: apartments = [] } = useQuery({
     queryKey: ['apartments'],
@@ -23,7 +27,11 @@ const Apartments = () => {
       ></Cover>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 py-24 max-w-7xl mx-auto">
         {apartments.map(apartment => (
-          <Apartment key={apartment._id} apartment={apartment}></Apartment>
+          <Apartment
+            key={apartment._id}
+            apartment={apartment}
+            handleAgreement={handleAgreement}
+          ></Apartment>
         ))}
       </div>
     </div>

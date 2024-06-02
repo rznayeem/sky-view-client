@@ -10,6 +10,7 @@ import {
 } from 'firebase/auth';
 import { createContext, useEffect, useState } from 'react';
 import auth from '../firebase/firebase.config';
+import useAxiosPublic from '../hooks/useAxiosPublic';
 
 export const AuthContext = createContext(null);
 
@@ -17,6 +18,7 @@ const googleProvider = new GoogleAuthProvider();
 // const githubProvider = new GithubAuthProvider();
 
 const AuthProvider = ({ children }) => {
+  const axiosPublic = useAxiosPublic();
   const [user, setUser] = useState(null);
   const [loader, setLoader] = useState(true);
 
@@ -49,37 +51,28 @@ const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, currentUser => {
-      const userEmail = currentUser?.email || user?.email;
-      const userInfo = { email: userEmail };
+      // const userEmail = currentUser?.email || user?.email;
+      // const userInfo = { email: userEmail };
       setUser(currentUser);
+      console.log(currentUser);
 
-      // if (currentUser) {
-      //   axios
-      //     .post(
-      //       'https://assignment-11-yum-yacht-server.vercel.app/jwt',
-      //       userInfo,
-      //       {
-      //         withCredentials: true,
-      //       }
-      //     )
-      //     .then(res => console.log(res.data));
-      // } else {
-      //   axios
-      //     .post(
-      //       'https://assignment-11-yum-yacht-server.vercel.app/logout',
-      //       userInfo,
-      //       {
-      //         withCredentials: true,
-      //       }
-      //     )
-      //     .then(res => console.log(res.data));
-      // }
+      if (currentUser) {
+        const userInfo = { email: currentUser.email };
+        axiosPublic.post('/jwt', userInfo).then(res => {
+          if (res.data.token) {
+            localStorage.setItem('access-token', res.data.token);
+          }
+          console.log(res.data);
+        });
+      } else {
+        localStorage.removeItem('access-token');
+      }
       setLoader(false);
     });
     return () => {
       unsubscribe();
     };
-  }, [user]);
+  }, [axiosPublic]);
 
   const logOut = () => {
     setLoader(true);

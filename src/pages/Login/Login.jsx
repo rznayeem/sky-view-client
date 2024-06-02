@@ -7,18 +7,13 @@ import login from '../../assets/login.json';
 import toast from 'react-hot-toast';
 import Cover from '../Shared/Cover/Cover';
 import useAuth from '../../hooks/useAuth';
+import useAxiosPublic from '../../hooks/useAxiosPublic';
 
 const Login = () => {
+  const axiosPublic = useAxiosPublic();
   const location = useLocation();
   const navigate = useNavigate();
-  const { signIn, googleLogin, githubLogin, setLoader, loader, user } =
-    useAuth();
-
-  // useEffect(() => {
-  //   if (user) {
-  //     navigate(location?.state || '/');
-  //   }
-  // }, [user, navigate, location]);
+  const { signIn, googleLogin, setLoader, loader, user } = useAuth();
 
   const [showPassword, setShowPassword] = useState(false);
 
@@ -57,15 +52,9 @@ const Login = () => {
           photo: user.photoURL,
         };
         if (user) {
-          fetch('https://assignment-11-yum-yacht-server.vercel.app/user', {
-            method: 'POST',
-            headers: {
-              'content-type': 'application/json',
-            },
-            body: JSON.stringify(userData),
-          })
-            .then(res => res.json())
-            .then(data => console.log(data));
+          axiosPublic
+            .post('/users', userData)
+            .then(res => console.log(res.data));
           toast.success('You have successfully logged in');
           navigate(location?.state ? location.state : '/');
         }
@@ -74,20 +63,6 @@ const Login = () => {
         console.log(error);
       });
   };
-
-  // const handleGithubLogin = () => {
-  //   githubLogin()
-  //     .then(result => {
-  //       const user = result.user;
-  //       if (user) {
-  //         toast.success('You have successfully logged in');
-  //         navigate(location?.state ? location.state : '/');
-  //       }
-  //     })
-  //     .catch(error => {
-  //       console.log(error);
-  //     });
-  // };
 
   return (
     <div>

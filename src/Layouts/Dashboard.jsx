@@ -7,10 +7,14 @@ import { PiUserSwitchDuotone } from 'react-icons/pi';
 import { HiSpeakerphone } from 'react-icons/hi';
 import { RiCoupon3Line } from 'react-icons/ri';
 import { LuHistory } from 'react-icons/lu';
+import useRole from '../hooks/useRole';
 
 const Dashboard = () => {
-  const isAdmin = false;
-  const isMember = true;
+  // const isAdmin = true;
+  // const isMember = true;
+
+  const [userRole] = useRole();
+  console.log(userRole);
 
   return (
     <div className="flex">
@@ -39,7 +43,7 @@ const Dashboard = () => {
           ></label>
           <ul className="menu p-4 w-80 min-h-full bg-[#CD8C66] text-[18px] text-white space-y-3">
             {/* Sidebar content here */}
-            {isAdmin ? (
+            {userRole === 'admin' ? (
               <>
                 <li className=" rounded-md border border-white  p-2">
                   <img
@@ -108,7 +112,7 @@ const Dashboard = () => {
                     My Profile
                   </NavLink>
                 </li>
-                {isMember && (
+                {userRole === 'member' && (
                   <>
                     <li>
                       <NavLink to={'/dashboard/makePayment'}>

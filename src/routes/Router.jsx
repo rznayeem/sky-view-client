@@ -5,6 +5,9 @@ import Login from '../pages/Login/Login';
 import Register from '../pages/Register/Register';
 import Apartments from '../pages/Apartments/Apartments';
 import Dashboard from '../Layouts/Dashboard';
+import Profile from '../pages/Dashboard/Profile/Profile';
+import AdminProfile from '../pages/Dashboard/AdminProfile/AdminProfile';
+import PrivateRoute from './PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -31,13 +34,28 @@ const router = createBrowserRouter([
   },
   {
     path: '/dashboard',
-    element: <Dashboard></Dashboard>,
-    // children: [
-    //   {
-    //     path: '/dashboard',
-    //     element:
-    //   }
-    // ]
+    element: (
+      <PrivateRoute>
+        <Dashboard></Dashboard>
+      </PrivateRoute>
+    ),
+    children: [
+      // user routes
+      {
+        path: 'profile',
+        element: (
+          <PrivateRoute>
+            <Profile></Profile>
+          </PrivateRoute>
+        ),
+      },
+
+      // admin routes
+      {
+        path: 'adminProfile',
+        element: <AdminProfile></AdminProfile>,
+      },
+    ],
   },
 ]);
 
