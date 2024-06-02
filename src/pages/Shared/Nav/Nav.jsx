@@ -10,19 +10,14 @@ const Nav = () => {
   const links = (
     <>
       <li
-        className={`btn h-auto w-auto bg-transparent border-none shadow-none hover:bg-transparent hover:text-[#2AB3FF] text-xl font-medium text-white`}
+        className={`btn h-auto w-auto bg-transparent border-none shadow-none hover:bg-transparent hover:text-[#CD8C66] text-xl font-medium text-white`}
       >
         <NavLink to={'/'}>Home</NavLink>
       </li>
       <li
-        className={`btn h-auto w-auto bg-transparent border-none shadow-none hover:bg-transparent hover:text-[#2AB3FF] text-xl font-medium text-white`}
+        className={`btn h-auto w-auto bg-transparent border-none shadow-none hover:bg-transparent hover:text-[#CD8C66] text-xl font-medium text-white`}
       >
         <NavLink to={'/apartment'}>Apartment</NavLink>
-      </li>
-      <li
-        className={`btn h-auto w-auto bg-transparent border-none shadow-none hover:bg-transparent hover:text-[#2AB3FF] text-xl font-medium text-white`}
-      >
-        <NavLink to={'/dashboard/users'}>Dashboard</NavLink>
       </li>
     </>
   );
@@ -49,7 +44,7 @@ const Nav = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm text-xl bg-[#FF923E] dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-52"
+            className="menu menu-sm text-xl bg-[#CD8C66] dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-52"
           >
             {links}
           </ul>
@@ -88,7 +83,7 @@ const Nav = () => {
             >
               <div>
                 <div className="avatar">
-                  <div className="w-10 rounded-full ring ring-[#FF5956] ring-offset-base-100 ring-offset-2">
+                  <div className="w-10 rounded-full ring ring-[#CD8C66] ring-offset-base-100 ring-offset-2">
                     <img
                       src={
                         user?.photoURL ||
@@ -101,10 +96,10 @@ const Nav = () => {
             </div>
             <ul
               tabIndex={0}
-              className="dropdown-content z-[100] space-y-5 bg-[#FF923E]/[.8] border-2 border-orange-300 menu p-2 shadow rounded-box lg:w-[330px] w-[250px]"
+              className="dropdown-content z-[100] space-y-5 bg-[#CD8C66]/[.8] border-2 border-orange-300 menu p-2 shadow rounded-box lg:w-[330px] w-[250px]"
             >
               <div className="avatar justify-center mt-5">
-                <div className="w-10 rounded-full ring ring-[#FF5956] ring-offset-base-100 ring-offset-2">
+                <div className="w-10 rounded-full ring ring-[#CD8C66] ring-offset-base-100 ring-offset-2">
                   <img
                     src={
                       user?.photoURL ||
@@ -120,36 +115,20 @@ const Nav = () => {
               </div>
               <div className="flex flex-col p-5 ">
                 <Link
-                  to={'/myList'}
-                  className="border-b p-2 btn h-auto w-auto shadow-none outline-none bg-transparent hover:bg-transparent border-none justify-start text-white"
+                  to={'/dashboard'}
+                  className="text-xl ml-2 mb-2  btn h-auto w-auto shadow-none outline-none bg-transparent hover:bg-transparent border-none justify-start text-white"
                 >
-                  My added food items
+                  Dashboard
                 </Link>
                 <hr />
                 <Link
-                  to={'/addFood'}
-                  className="border-b p-2 btn h-auto w-auto shadow-none outline-none bg-transparent hover:bg-transparent border-none justify-start text-white"
-                >
-                  Add a food item
-                </Link>
-                <hr />
-                <Link
-                  to={'/myOrder'}
-                  className="border-b p-2 btn h-auto w-auto shadow-none outline-none bg-transparent hover:bg-transparent border-none justify-start text-white"
-                >
-                  My order list
-                </Link>
-                <hr />
-              </div>
-              <li>
-                <Link
-                  className="text-xl ml-2 mb-2"
+                  className="text-xl ml-2 mb-2  btn h-auto w-auto shadow-none outline-none bg-transparent hover:bg-transparent border-none justify-start text-white"
                   to={'/login'}
                   onClick={() => logOut()}
                 >
                   Logout <FiLogOut />
                 </Link>
-              </li>
+              </div>
             </ul>
           </div>
         ) : (
