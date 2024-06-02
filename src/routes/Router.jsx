@@ -8,6 +8,7 @@ import Dashboard from '../Layouts/Dashboard';
 import Profile from '../pages/Dashboard/Profile/Profile';
 import AdminProfile from '../pages/Dashboard/AdminProfile/AdminProfile';
 import PrivateRoute from './PrivateRoute';
+import Agreements from '../pages/Dashboard/Agreements/Agreements';
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
       {
         path: 'adminProfile',
         element: <AdminProfile></AdminProfile>,
+      },
+      {
+        path: 'agreement',
+        element: <Agreements></Agreements>,
       },
     ],
   },

@@ -28,7 +28,7 @@ const Apartment = ({ apartment, handleAgreement }) => {
             />
           </div>
           <p className="absolute top-3 left-3 bg-[#CD8C66] px-3 rounded-md text-white">
-            {rent} sold
+            Floor: {floor}
           </p>
 
           <div className="flex items-center relative p-6 space-y-4">

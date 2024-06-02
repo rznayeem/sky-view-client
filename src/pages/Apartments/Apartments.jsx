@@ -4,6 +4,7 @@ import Apartment from './Apartment/Apartment';
 import Cover from '../Shared/Cover/Cover';
 import useAuth from '../../hooks/useAuth';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
+import toast from 'react-hot-toast';
 
 const Apartments = () => {
   const axiosPublic = useAxiosPublic();
@@ -19,6 +20,7 @@ const Apartments = () => {
   });
 
   const handleAgreement = apartment => {
+    const currentDate = new Date().getTime();
     const agreementData = {
       user_name: user?.displayName,
       email: user?.email,
@@ -27,10 +29,16 @@ const Apartments = () => {
       apartment_no: apartment.apartment_no,
       rent: apartment.rent,
       status: 'pending',
+      apartmentId: apartment._id,
+      date: new Date(currentDate),
     };
-    axiosSecure
-      .post('/agreement', agreementData)
-      .then(res => console.log(res.data));
+    console.log(agreementData);
+    axiosSecure.post('/agreement', agreementData).then(res => {
+      console.log(res.data);
+      if (!res.data.insertedId) {
+        toast.error('You can not apply more than one apartment!');
+      }
+    });
   };
 
   return (

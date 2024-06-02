@@ -31,7 +31,7 @@ const Dashboard = () => {
               <IoMenuSharp />
             </label>
           </div>
-          <div className="my-28">
+          <div className="">
             <Outlet></Outlet>
           </div>
         </div>
@@ -70,7 +70,7 @@ const Dashboard = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to={'/dashboard/announcement'}>
+                  <NavLink to={'/dashboard/makeAnnouncement'}>
                     <span className="bg-white text-xl p-2 text-[#CD8C66] rounded-md shadow-lg mr-3">
                       <HiSpeakerphone />
                     </span>
@@ -78,7 +78,7 @@ const Dashboard = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to={'/dashboard/makeAnnouncement'}>
+                  <NavLink to={'/dashboard/agreement'}>
                     <span className="bg-white text-xl p-2 text-[#CD8C66] rounded-md shadow-lg mr-3">
                       <FaFileAlt />
                     </span>
@@ -105,7 +105,7 @@ const Dashboard = () => {
                 </li>
                 <div className="divider before:bg-white after:bg-white"></div>
                 <li>
-                  <NavLink to={'/dashboard/adminProfile'}>
+                  <NavLink to={'/dashboard/profile'}>
                     <span className="bg-white text-xl p-2 text-[#CD8C66] rounded-md shadow-lg mr-3">
                       <PiUserSwitchDuotone />
                     </span>
