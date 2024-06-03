@@ -9,6 +9,8 @@ import Profile from '../pages/Dashboard/Profile/Profile';
 import AdminProfile from '../pages/Dashboard/AdminProfile/AdminProfile';
 import PrivateRoute from './PrivateRoute';
 import Agreements from '../pages/Dashboard/Agreements/Agreements';
+import ManageMembers from '../pages/Dashboard/ManageMembers/ManageMembers';
+import MakeAnnouncement from '../pages/Dashboard/MakeAnnouncement/MakeAnnouncement';
 
 const router = createBrowserRouter([
   {
@@ -55,6 +57,14 @@ const router = createBrowserRouter([
       {
         path: 'adminProfile',
         element: <AdminProfile></AdminProfile>,
+      },
+      {
+        path: 'manageMembers',
+        element: <ManageMembers></ManageMembers>,
+      },
+      {
+        path: 'makeAnnouncement',
+        element: <MakeAnnouncement></MakeAnnouncement>,
       },
       {
         path: 'agreement',

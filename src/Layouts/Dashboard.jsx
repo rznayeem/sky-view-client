@@ -31,7 +31,7 @@ const Dashboard = () => {
               <IoMenuSharp />
             </label>
           </div>
-          <div className="">
+          <div className="bg-[#F9F3EF] min-h-screen">
             <Outlet></Outlet>
           </div>
         </div>

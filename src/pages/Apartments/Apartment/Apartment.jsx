@@ -14,6 +14,7 @@ const Apartment = ({ apartment, handleAgreement }) => {
     room,
     area,
     _id,
+    status,
   } = apartment;
 
   return (
@@ -30,6 +31,11 @@ const Apartment = ({ apartment, handleAgreement }) => {
           <p className="absolute top-3 left-3 bg-[#CD8C66] px-3 rounded-md text-white">
             Floor: {floor}
           </p>
+          {status === 'unavailable' && (
+            <p className="absolute top-0 right-0 bg-red-600 px-3 rounded-bl-md text-white">
+              {status}
+            </p>
+          )}
 
           <div className="flex items-center relative p-6 space-y-4">
             <div className="w-[50%] space-y-2">
@@ -53,7 +59,7 @@ const Apartment = ({ apartment, handleAgreement }) => {
           </div>
           <div className="flex flex-1 items-center justify-center overflow-hidden">
             <button
-              onClick={() => handleAgreement(apartment)}
+              onClick={() => handleAgreement(apartment, status)}
               className="group transition ease-in-out hover:scale-110 relative z-50 h-16 w-full overflow-hidden bg-[#CD8C66] text-xl text-white duration-500"
             >
               Agreement

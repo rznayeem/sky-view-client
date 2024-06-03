@@ -19,7 +19,10 @@ const Apartments = () => {
     },
   });
 
-  const handleAgreement = apartment => {
+  const handleAgreement = (apartment, status) => {
+    if (status === 'unavailable') {
+      return toast.error('This apartment is unavailable!');
+    }
     const currentDate = new Date().getTime();
     const agreementData = {
       user_name: user?.displayName,
