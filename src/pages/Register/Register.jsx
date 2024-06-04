@@ -1,10 +1,9 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { useContext, useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import Lottie from 'lottie-react';
 import registerLottie from '../../assets/register.json';
-import { AuthContext } from '../../Providers/AuthProvider';
 import toast from 'react-hot-toast';
 import header from '../../assets/cover.jpg';
 import Cover from '../Shared/Cover/Cover';
@@ -14,7 +13,7 @@ import useAxiosPublic from '../../hooks/useAxiosPublic';
 const Register = () => {
   const axiosPublic = useAxiosPublic();
   const navigate = useNavigate();
-  const { createUser, updateUserData, user, loader } = useAuth();
+  const { createUser, updateUserData } = useAuth();
   const [error, setError] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 

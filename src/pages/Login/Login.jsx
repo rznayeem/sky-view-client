@@ -1,7 +1,7 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { FaEye, FaEyeSlash, FaGithub } from 'react-icons/fa';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import Lottie from 'lottie-react';
 import login from '../../assets/login.json';
 import toast from 'react-hot-toast';
@@ -13,7 +13,7 @@ const Login = () => {
   const axiosPublic = useAxiosPublic();
   const location = useLocation();
   const navigate = useNavigate();
-  const { signIn, googleLogin, setLoader, loader, user } = useAuth();
+  const { signIn, googleLogin, setLoader } = useAuth();
 
   const [showPassword, setShowPassword] = useState(false);
 

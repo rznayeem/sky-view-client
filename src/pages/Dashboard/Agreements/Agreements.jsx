@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { FaRegCalendarAlt, FaTrash, FaUser } from 'react-icons/fa';
+import { FaRegCalendarAlt, FaUser } from 'react-icons/fa';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import {
   MdApartment,

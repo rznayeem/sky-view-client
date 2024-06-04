@@ -5,6 +5,7 @@ import { MdOutlineBed } from 'react-icons/md';
 import { TfiRuler } from 'react-icons/tfi';
 import { useQuery } from '@tanstack/react-query';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
+import Timestamp from 'react-timestamp';
 
 const Profile = () => {
   const { user } = useAuth();
@@ -13,7 +14,7 @@ const Profile = () => {
   const axiosSecure = useAxiosSecure();
 
   const { data: agreement = [] } = useQuery({
-    queryKey: ['agreement'],
+    queryKey: ['agreement', user?.email],
     queryFn: async () => {
       const res = await axiosSecure.get(`/agreement/${user?.email}`);
       console.log(res.data);
@@ -35,7 +36,7 @@ const Profile = () => {
         <div className="w-full flex items-center gap-6">
           <div className="my-2 w-[40%] bg-white rounded-lg shadow-md p-7 space-y-5">
             <h1 className="font-teko text-3xl font-bold">
-              Profile Information:
+              Profile Information :
             </h1>
             <h2 className="text-xl font-semibold sm:text-2xl font-teko ">
               Name: <span className="font-normal">{user?.displayName}</span>
@@ -50,22 +51,34 @@ const Profile = () => {
           </div>
           <div className="my-2 w-[60%] bg-white rounded-lg shadow-md p-7 space-y-5">
             <h1 className="font-teko text-3xl font-bold">
-              Your Apartment Information:
+              Your Apartment Information :
             </h1>
-            <div className="space-y-2 w-[50%]">
-              <div className="flex items-center gap-4 text-xl">
-                <PiBathtub />
-                <h4>Floor: {agreement.floor}</h4>
+            {userRole === 'member' ? (
+              <div className="space-y-2">
+                <h3>
+                  <span className="font-medium text-xl">
+                    Agreement accept date:
+                  </span>{' '}
+                  <Timestamp date={agreement.accept_date}></Timestamp>{' '}
+                </h3>
+                <div className="flex items-center gap-4 text-xl">
+                  <PiBathtub />
+                  <h4>Floor: {agreement.floor}</h4>
+                </div>
+                <div className="flex items-center gap-4 text-xl">
+                  <MdOutlineBed />
+                  <h4>Block Name:{agreement.block_name}</h4>
+                </div>
+                <div className="flex items-center gap-4 text-xl">
+                  <TfiRuler />
+                  <h4>Apartment No: {agreement.apartment_no}</h4>
+                </div>
               </div>
-              <div className="flex items-center gap-4 text-xl">
-                <MdOutlineBed />
-                <h4>Block Name:{agreement.block_name}</h4>
+            ) : (
+              <div>
+                <h3>You have not booked any apartment yet..</h3>
               </div>
-              <div className="flex items-center gap-4 text-xl">
-                <TfiRuler />
-                <h4>Apartment No: {agreement.apartment_no}</h4>
-              </div>
-            </div>
+            )}
           </div>
         </div>
       </div>

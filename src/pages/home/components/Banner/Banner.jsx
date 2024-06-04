@@ -1,7 +1,6 @@
 import Lottie from 'lottie-react';
 import { useCallback, useEffect, useState } from 'react';
 import arrow from '../../../../assets/arrow.json';
-import { Link } from 'react-router-dom';
 import { Typewriter } from 'react-simple-typewriter';
 
 const Banner = () => {

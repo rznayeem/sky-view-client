@@ -119,7 +119,7 @@ const Dashboard = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to={'/dashboard/announcement'}>
+                      <NavLink to={'/dashboard/paymentHistory'}>
                         <span className="bg-white text-xl p-2 text-[#CD8C66] rounded-md shadow-lg mr-3">
                           <LuHistory />
                         </span>

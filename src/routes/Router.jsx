@@ -12,6 +12,7 @@ import Agreements from '../pages/Dashboard/Agreements/Agreements';
 import ManageMembers from '../pages/Dashboard/ManageMembers/ManageMembers';
 import MakeAnnouncement from '../pages/Dashboard/MakeAnnouncement/MakeAnnouncement';
 import ManageCoupons from '../pages/Dashboard/ManageCoupons/ManageCoupons';
+import Announcements from '../pages/Dashboard/Announcements/Announcements';
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
             <Profile></Profile>
           </PrivateRoute>
         ),
+      },
+      {
+        path: 'announcement',
+        element: <Announcements></Announcements>,
       },
 
       // admin routes

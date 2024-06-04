@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { MdOutlineBed } from 'react-icons/md';
 import { PiBathtub } from 'react-icons/pi';
 import { TfiRuler } from 'react-icons/tfi';
@@ -76,6 +77,23 @@ const Apartment = ({ apartment, handleAgreement }) => {
       </div>
     </div>
   );
+};
+
+Apartment.propTypes = {
+  apartment: PropTypes.shape({
+    _id: PropTypes.any,
+    apartment_no: PropTypes.any,
+    area: PropTypes.any,
+    bath: PropTypes.any,
+    block_name: PropTypes.any,
+    floor: PropTypes.any,
+    image: PropTypes.any,
+    rent: PropTypes.any,
+    room: PropTypes.any,
+    status: PropTypes.string,
+    title: PropTypes.any,
+  }),
+  handleAgreement: PropTypes.func,
 };
 
 export default Apartment;
