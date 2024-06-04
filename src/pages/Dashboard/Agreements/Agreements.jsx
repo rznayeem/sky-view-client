@@ -22,9 +22,16 @@ const Agreements = () => {
   });
 
   const handleCheck = (agreement, check) => {
+    const currentDate = new Date();
+
+    const acceptDate = {
+      currentDate,
+    };
+
     axiosSecure
       .patch(
-        `/agreement/checking/${agreement._id}?check=${check}&email=${agreement.email}&apartmentId=${agreement.apartmentId}`
+        `/agreement/checking/${agreement._id}?check=${check}&email=${agreement.email}&apartmentId=${agreement.apartmentId}`,
+        acceptDate
       )
       .then(res => {
         refetch();

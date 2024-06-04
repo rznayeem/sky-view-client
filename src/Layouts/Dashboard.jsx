@@ -10,11 +10,7 @@ import { LuHistory } from 'react-icons/lu';
 import useRole from '../hooks/useRole';
 
 const Dashboard = () => {
-  // const isAdmin = true;
-  // const isMember = true;
-
   const [userRole] = useRole();
-  console.log(userRole);
 
   return (
     <div className="flex">
