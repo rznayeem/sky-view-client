@@ -11,6 +11,7 @@ import PrivateRoute from './PrivateRoute';
 import Agreements from '../pages/Dashboard/Agreements/Agreements';
 import ManageMembers from '../pages/Dashboard/ManageMembers/ManageMembers';
 import MakeAnnouncement from '../pages/Dashboard/MakeAnnouncement/MakeAnnouncement';
+import ManageCoupons from '../pages/Dashboard/ManageCoupons/ManageCoupons';
 
 const router = createBrowserRouter([
   {
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
       {
         path: 'agreement',
         element: <Agreements></Agreements>,
+      },
+      {
+        path: 'manageCoupons',
+        element: <ManageCoupons></ManageCoupons>,
       },
     ],
   },

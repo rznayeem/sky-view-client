@@ -11,7 +11,7 @@ const Apartments = () => {
   const axiosSecure = useAxiosSecure();
   const { user } = useAuth();
 
-  const { refetch, data: apartments = [] } = useQuery({
+  const { data: apartments = [] } = useQuery({
     queryKey: ['apartments'],
     queryFn: async () => {
       const res = await axiosPublic.get('/apartment');
