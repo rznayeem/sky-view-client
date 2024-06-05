@@ -3,24 +3,14 @@ import useAuth from '../../../hooks/useAuth';
 import useRole from '../../../hooks/useRole';
 import { MdOutlineBed } from 'react-icons/md';
 import { TfiRuler } from 'react-icons/tfi';
-import { useQuery } from '@tanstack/react-query';
-import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import Timestamp from 'react-timestamp';
+import useAgreement from '../../../hooks/useAgreement';
 
 const Profile = () => {
   const { user } = useAuth();
   const [userRole] = useRole();
 
-  const axiosSecure = useAxiosSecure();
-
-  const { data: agreement = [] } = useQuery({
-    queryKey: ['agreement', user?.email],
-    queryFn: async () => {
-      const res = await axiosSecure.get(`/agreement/${user?.email}`);
-      console.log(res.data);
-      return res.data;
-    },
-  });
+  const [agreement] = useAgreement();
 
   return (
     <div className=" py-24">

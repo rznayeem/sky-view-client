@@ -13,6 +13,8 @@ import ManageMembers from '../pages/Dashboard/ManageMembers/ManageMembers';
 import MakeAnnouncement from '../pages/Dashboard/MakeAnnouncement/MakeAnnouncement';
 import ManageCoupons from '../pages/Dashboard/ManageCoupons/ManageCoupons';
 import Announcements from '../pages/Dashboard/Announcements/Announcements';
+import MakePayment from '../pages/Dashboard/MakePayment/MakePayment';
+import Payment from '../pages/Dashboard/MakePayment/Payment/Payment';
 
 const router = createBrowserRouter([
   {
@@ -57,6 +59,17 @@ const router = createBrowserRouter([
       {
         path: 'announcement',
         element: <Announcements></Announcements>,
+      },
+
+      // members routes
+
+      {
+        path: 'makePayment',
+        element: <MakePayment></MakePayment>,
+      },
+      {
+        path: 'payment/:month',
+        element: <Payment></Payment>,
       },
 
       // admin routes
