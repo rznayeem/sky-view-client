@@ -10,7 +10,7 @@ const Profile = () => {
   const { user } = useAuth();
   const [userRole] = useRole();
 
-  const [agreement] = useAgreement();
+  const [, agreement] = useAgreement();
 
   return (
     <div className=" py-24">

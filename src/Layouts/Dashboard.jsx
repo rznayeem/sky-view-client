@@ -8,6 +8,7 @@ import { HiSpeakerphone } from 'react-icons/hi';
 import { RiCoupon3Line } from 'react-icons/ri';
 import { LuHistory } from 'react-icons/lu';
 import useRole from '../hooks/useRole';
+import { Toaster } from 'react-hot-toast';
 
 const Dashboard = () => {
   const [userRole] = useRole();
@@ -147,6 +148,7 @@ const Dashboard = () => {
           </ul>
         </div>
       </div>
+      <Toaster />
     </div>
   );
 };

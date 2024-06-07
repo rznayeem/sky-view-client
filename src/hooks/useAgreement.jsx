@@ -7,7 +7,11 @@ const useAgreement = () => {
 
   const axiosSecure = useAxiosSecure();
 
-  const { data: agreement = [] } = useQuery({
+  const {
+    refetch,
+    data: agreement = [],
+    isLoading,
+  } = useQuery({
     queryKey: ['agreement', user?.email],
     queryFn: async () => {
       const res = await axiosSecure.get(`/agreement/${user?.email}`);
@@ -15,7 +19,7 @@ const useAgreement = () => {
       return res.data;
     },
   });
-  return [agreement];
+  return [refetch, agreement, isLoading];
 };
 
 export default useAgreement;

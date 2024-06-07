@@ -3,11 +3,10 @@ import './makePayment.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useAgreement from '../../../hooks/useAgreement';
-import { RiCoupon4Fill } from 'react-icons/ri';
 import { FaDollarSign } from 'react-icons/fa';
 
 const MakePayment = () => {
-  const [agreement] = useAgreement();
+  const [, agreement] = useAgreement();
   const [month, setMonth] = useState('');
   const [error, setError] = useState(false);
   const options = [

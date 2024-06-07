@@ -1,15 +1,17 @@
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import { useParams } from 'react-router-dom';
-const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+import CheckOutForm from './CheckOutForm';
+const stripePromise = loadStripe(import.meta.env.VITE_PUBLISHABLE_KEY);
 
 const Payment = () => {
   const { month } = useParams();
-  console.log(month);
 
   return (
     <div>
-      <Elements stripe={stripePromise}></Elements>
+      <Elements stripe={stripePromise}>
+        <CheckOutForm month={month}></CheckOutForm>
+      </Elements>
     </div>
   );
 };

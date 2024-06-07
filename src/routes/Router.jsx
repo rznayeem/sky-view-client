@@ -15,6 +15,7 @@ import ManageCoupons from '../pages/Dashboard/ManageCoupons/ManageCoupons';
 import Announcements from '../pages/Dashboard/Announcements/Announcements';
 import MakePayment from '../pages/Dashboard/MakePayment/MakePayment';
 import Payment from '../pages/Dashboard/MakePayment/Payment/Payment';
+import PaymentHistory from '../pages/Dashboard/PymentHistory/PaymentHistory';
 
 const router = createBrowserRouter([
   {
@@ -70,6 +71,14 @@ const router = createBrowserRouter([
       {
         path: 'payment/:month',
         element: <Payment></Payment>,
+      },
+      {
+        path: 'paymentHistory',
+        element: (
+          <PrivateRoute>
+            <PaymentHistory></PaymentHistory>
+          </PrivateRoute>
+        ),
       },
 
       // admin routes
