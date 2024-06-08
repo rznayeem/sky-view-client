@@ -1,23 +1,14 @@
-import { useQuery } from '@tanstack/react-query';
-import useAxiosPublic from '../../hooks/useAxiosPublic';
 import Apartment from './Apartment/Apartment';
 import Cover from '../Shared/Cover/Cover';
 import useAuth from '../../hooks/useAuth';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
 import toast from 'react-hot-toast';
+import useApartments from '../../hooks/useApartments';
 
 const Apartments = () => {
-  const axiosPublic = useAxiosPublic();
   const axiosSecure = useAxiosSecure();
+  const [apartments] = useApartments();
   const { user } = useAuth();
-
-  const { data: apartments = [] } = useQuery({
-    queryKey: ['apartments'],
-    queryFn: async () => {
-      const res = await axiosPublic.get('/apartment');
-      return res.data;
-    },
-  });
 
   const handleAgreement = (apartment, status) => {
     if (status === 'unavailable') {

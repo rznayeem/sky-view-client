@@ -33,11 +33,12 @@ const PaymentHistory = () => {
             <thead>
               <tr className="text-[16px]">
                 <th></th>
-                <th>Customer Details</th>
+                <th>Payment Date</th>
                 <th>
-                  <div className="flex gap-3 items-center">
+                  {/* <div className="flex gap-3 items-center">
                     <MdApartment /> Apartment Details
-                  </div>
+                  </div> */}
+                  Rent Month
                 </th>
                 <th>
                   <div className="flex gap-3 items-center">
@@ -46,12 +47,12 @@ const PaymentHistory = () => {
                   </div>
                 </th>
                 <th>
-                  <div className="flex gap-3 items-center">
+                  {/* <div className="flex gap-3 items-center">
                     <FaRegCalendarAlt />
                     Payment Date
-                  </div>
+                  </div> */}
+                  Transaction ID
                 </th>
-                <th>Action</th>
               </tr>
             </thead>
             <tbody>
@@ -60,17 +61,10 @@ const PaymentHistory = () => {
                 <tr className="hover" key={idx}>
                   <td>{idx + 1}</td>
                   <td>
-                    <div className="flex flex-col items-start gap-3">
-                      <h3 className="flex items-center gap-3">
-                        <FaUser /> {payment.name}
-                      </h3>
-                      <h3 className="flex items-center gap-3">
-                        <MdOutlineMail /> {payment.email}
-                      </h3>
-                    </div>
+                    <Timestamp date={payment.date}></Timestamp>
                   </td>
                   <td>
-                    <div className="space-y-3">
+                    {/* <div className="space-y-3">
                       <h1 className="flex items-center gap-2  font-semibold">
                         <span className="flex items-center gap-2 font-semibold text-[#797F87]">
                           <MdApartment /> Floor No:
@@ -89,13 +83,11 @@ const PaymentHistory = () => {
                         </span>{' '}
                         {payment.apartment_no}
                       </h1>
-                    </div>
+                    </div> */}
+                    {payment.month}
                   </td>
                   <td>${payment.rent}</td>
-                  <td className="text-[16px]">
-                    <Timestamp date={payment.date}></Timestamp>
-                  </td>
-                  <th className="flex"></th>
+                  <td className="text-[16px]">{payment.transactionID}</td>
                 </tr>
               ))}
             </tbody>

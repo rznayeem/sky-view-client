@@ -2,17 +2,12 @@ import { FaTrash, FaUser } from 'react-icons/fa';
 import { MdOutlineMail } from 'react-icons/md';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
+import useMembers from '../../../hooks/useMembers';
 
 const ManageMembers = () => {
   const axiosSecure = useAxiosSecure();
 
-  const { refetch, data: members = [] } = useQuery({
-    queryKey: ['members'],
-    queryFn: async () => {
-      const res = await axiosSecure.get('/members');
-      return res.data;
-    },
-  });
+  const [refetch, members] = useMembers();
 
   const handleMembers = email => {
     axiosSecure.patch(`/users/${email}`).then(res => {

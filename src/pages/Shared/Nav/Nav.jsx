@@ -114,7 +114,11 @@ const Nav = () => {
               </div>
               <div className="flex flex-col p-5 ">
                 <Link
-                  to={'/dashboard'}
+                  to={
+                    user?.email === 'sky@view.com'
+                      ? '/dashboard/adminProfile'
+                      : '/dashboard/profile'
+                  }
                   className="text-xl ml-2 mb-2  btn h-auto w-auto shadow-none outline-none bg-transparent hover:bg-transparent border-none justify-start text-white"
                 >
                   Dashboard
