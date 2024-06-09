@@ -9,6 +9,7 @@ import {
 import { VscDiffRenamed } from 'react-icons/vsc';
 import Timestamp from 'react-timestamp';
 import { LiaMoneyCheckAltSolid } from 'react-icons/lia';
+import Swal from 'sweetalert2';
 
 const Agreements = () => {
   const axiosSecure = useAxiosSecure();
@@ -28,15 +29,40 @@ const Agreements = () => {
       currentDate,
     };
 
-    axiosSecure
-      .patch(
-        `/agreement/checking/${agreement._id}?check=${check}&email=${agreement.email}&apartmentId=${agreement.apartmentId}`,
-        acceptDate
-      )
-      .then(res => {
-        refetch();
-        console.log(res.data);
-      });
+    Swal.fire({
+      title: 'Are you sure?',
+      text:
+        check === 'approve'
+          ? `Do you want to approve ${agreement.user_name}'s agreement?`
+          : `Do you want to remove ${agreement.user_name}'s agreement?`,
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText:
+        check === 'approve' ? 'Yes approve agreement!' : 'Yes, remove it!',
+    }).then(result => {
+      if (result.isConfirmed) {
+        axiosSecure
+          .patch(
+            `/agreement/checking/${agreement._id}?check=${check}&email=${agreement.email}&apartmentId=${agreement.apartmentId}`,
+            acceptDate
+          )
+          .then(res => {
+            if (res.data.modifiedCount > 0) {
+              Swal.fire({
+                title: check === 'approve' ? 'Approved!' : 'Removed!',
+                text:
+                  check === 'approve'
+                    ? 'Agreement accepted successfully!'
+                    : 'Agreement rejected!',
+                icon: 'success',
+              });
+              refetch();
+            }
+          });
+      }
+    });
   };
 
   return (

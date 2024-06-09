@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 
 const MakeAnnouncement = () => {
@@ -14,7 +15,15 @@ const MakeAnnouncement = () => {
       date: new Date(),
     };
     axiosSecure.post('/announcement', announcementData).then(res => {
-      console.log(res.data);
+      if (res.data.acknowledged) {
+        Swal.fire({
+          position: 'Center',
+          icon: 'success',
+          title: 'New announcement successfully published!',
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      }
     });
   };
 

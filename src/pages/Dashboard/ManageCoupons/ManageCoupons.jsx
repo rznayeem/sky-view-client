@@ -3,6 +3,7 @@ import useCoupon from '../../../hooks/useCoupon';
 import { RiCoupon4Fill } from 'react-icons/ri';
 import { FaPercent } from 'react-icons/fa';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
+import Swal from 'sweetalert2';
 
 const ManageCoupons = () => {
   const axiosSecure = useAxiosSecure();
@@ -18,7 +19,13 @@ const ManageCoupons = () => {
       description: form.description.value,
     };
     axiosSecure.post('/coupons', couponData).then(res => {
-      console.log(res.data);
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'New coupon added successfully!',
+        showConfirmButton: false,
+        timer: 1500,
+      });
       refetch();
     });
   };

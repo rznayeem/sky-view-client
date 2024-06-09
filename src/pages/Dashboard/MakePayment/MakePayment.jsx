@@ -81,7 +81,7 @@ const MakePayment = () => {
               />
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 grid-cols-2 gap-6">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Apartment no</span>
@@ -96,24 +96,22 @@ const MakePayment = () => {
                 required
               />
             </div>
-            <div className="form-control">
+            <div className="form-control relative">
               <label className="label">
                 <span className="label-text">Rent</span>
               </label>
-              <div className="relative">
-                <input
-                  type="text"
-                  name="rent"
-                  disabled
-                  defaultValue={agreement.rent}
-                  placeholder="Monthly rent"
-                  className="input input-bordered pl-6"
-                  required
-                />
-                <span className="absolute text-xl left-2 top-1/2 -translate-y-1/2">
-                  <FaDollarSign className="text-[16px] text-[#9DA1A7]" />
-                </span>
-              </div>
+              <input
+                type="text"
+                name="rent"
+                disabled
+                defaultValue={agreement.rent}
+                placeholder="Monthly rent"
+                className="input input-bordered md:pl-6"
+                required
+              />
+              <span className="absolute text-xl left-2 top-[63%]">
+                <FaDollarSign className="text-[16px] text-[#9DA1A7]" />
+              </span>
             </div>
             <div className="form-control">
               <label className="label">

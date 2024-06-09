@@ -25,7 +25,11 @@ const Nav = () => {
     <div className="navbar fixed bg-black/[.5] z-50 md:px-14 mx-auto h-28">
       <div className="navbar-start">
         <div data-aos="fade-down" className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn bg-white btn-ghost lg:hidden"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -62,7 +66,7 @@ const Nav = () => {
       </div>
       <div data-aos="fade-down" className="navbar-center hidden lg:flex"></div>
       <div data-aos="fade-left" className="navbar-end">
-        <ul className="text-xl font-medium bg-transparent flex items-center mr-10">
+        <ul className="text-xl font-medium hidden bg-transparent lg:flex items-center mr-10">
           {links}
         </ul>
         {loader ? (

@@ -11,7 +11,9 @@ const Cover = ({ headerTitle, title, path }) => {
       }}
     >
       <div className="text-center space-y-6">
-        <h1 className="text-7xl font-bold font-mercellus">{headerTitle}</h1>
+        <h1 className="lg:text-7xl text-3xl font-bold font-mercellus">
+          {headerTitle}
+        </h1>
         <p className=" text-2xl">
           <Link to={'/'} className="hover:text-orange-400">
             {path}

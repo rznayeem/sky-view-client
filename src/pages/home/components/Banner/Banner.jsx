@@ -78,8 +78,8 @@ const Banner = () => {
         </div>
       </div>
 
-      <div className="absolute top-1/2 w-full h-full left-1/2 -translate-x-1/2 -translate-y-1/2 text-center md:text-white lg:text-white p-7 bg-black/[.5] space-y-3">
-        <div className="absolute space-y-6 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <div className="absolute top-1/2 w-full h-full left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white p-7 bg-black/[.5] space-y-3">
+        <div className="absolute space-y-6 bottom-10 md:bottom-auto md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
           <h1
             data-aos="fade-down"
             data-aos-duration="1000"

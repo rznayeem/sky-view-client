@@ -14,7 +14,6 @@ const Apartment = ({ apartment, handleAgreement }) => {
     bath,
     room,
     area,
-    _id,
     status,
   } = apartment;
 
@@ -22,13 +21,19 @@ const Apartment = ({ apartment, handleAgreement }) => {
     <div>
       <div>
         <div className="relative border border-[#DC8756]">
-          <div className="overflow-hidden">
+          <div className=" relative overflow-hidden">
             <img
               src={image}
               alt=""
               className=" object-cover object-center w-full h-72 transition duration-300 ease-in-out hover:scale-110"
             />
+            <div className="flex absolute bottom-0 w-full p-2 bg-white/[.7] font-bold justify-center gap-6">
+              <p>Apartment No: {apartment_no}</p>
+              <div className="divider bg-gray-500 divider-horizontal"></div>
+              <p>Block Name: {block_name}</p>
+            </div>
           </div>
+
           <p className="absolute top-3 left-3 bg-[#DC8756] px-3 rounded-md text-white">
             Floor: {floor}
           </p>
@@ -37,11 +42,6 @@ const Apartment = ({ apartment, handleAgreement }) => {
               {status}
             </p>
           )}
-
-          <div className="flex justify-center gap-6">
-            <p>Apartment No: {apartment_no}</p>
-            <p>Block Name: {block_name}</p>
-          </div>
 
           <div className="flex items-center relative p-6 space-y-4">
             <div className="w-[50%] space-y-2">
@@ -66,7 +66,7 @@ const Apartment = ({ apartment, handleAgreement }) => {
           <div className="flex flex-1 items-center justify-center overflow-hidden">
             <button
               onClick={() => handleAgreement(apartment, status)}
-              className="group transition ease-in-out hover:scale-110 relative z-50 h-16 w-full overflow-hidden bg-[#DC8756] text-xl text-white duration-500"
+              className="group transition ease-in-out hover:scale-110 relative h-16 w-full overflow-hidden bg-[#DC8756] text-xl text-white duration-500"
             >
               Agreement
               <span className="absolute inset-0 z-10 flex items-center justify-center text-white opacity-0 duration-100 ease-out group-hover:opacity-100 group-hover:duration-1000">

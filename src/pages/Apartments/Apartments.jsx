@@ -3,12 +3,12 @@ import Cover from '../Shared/Cover/Cover';
 import useAuth from '../../hooks/useAuth';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
 import toast from 'react-hot-toast';
-import useApartments from '../../hooks/useApartments';
 import Spinner from '../Shared/Spinner/Spinner';
 import { useState } from 'react';
 import useApartmentCount from '../../hooks/useApartmentCount';
 import { useQuery } from '@tanstack/react-query';
 import useAxiosPublic from '../../hooks/useAxiosPublic';
+import Swal from 'sweetalert2';
 
 const Apartments = () => {
   const [pageNumber, setPageNumber] = useState(1);
@@ -58,6 +58,15 @@ const Apartments = () => {
       console.log(res.data);
       if (!res.data.insertedId) {
         toast.error('You can not apply more than one apartment!');
+      } else {
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title:
+            'Agreement applied successfully! Please wait for the confirmation',
+          showConfirmButton: false,
+          timer: 1500,
+        });
       }
     });
   };
