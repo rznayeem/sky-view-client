@@ -28,9 +28,9 @@ const Apartment = ({ apartment, handleAgreement }) => {
               className=" object-cover object-center w-full h-72 transition duration-300 ease-in-out hover:scale-110"
             />
             <div className="flex absolute bottom-0 w-full p-2 bg-white/[.7] font-bold justify-center gap-6">
-              <p>Apartment No: {apartment_no}</p>
-              <div className="divider bg-gray-500 divider-horizontal"></div>
-              <p>Block Name: {block_name}</p>
+              <p className="w-1/2">Apartment No: {apartment_no}</p>
+              <div className="divider before:bg-black after:bg-black divider-horizontal"></div>
+              <p className="w-1/2">Block Name: {block_name}</p>
             </div>
           </div>
 
