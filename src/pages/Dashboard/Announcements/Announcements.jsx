@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import Timestamp from 'react-timestamp';
+import { Helmet } from 'react-helmet';
 
 const Announcements = () => {
   const axiosSecure = useAxiosSecure();
@@ -15,6 +16,9 @@ const Announcements = () => {
 
   return (
     <div className="py-24">
+      <Helmet>
+        <title>Sky View | Dashboard - Announcements</title>
+      </Helmet>
       {announcements.map(announcement => (
         <div
           key={announcement._id}

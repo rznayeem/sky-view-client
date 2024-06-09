@@ -6,6 +6,7 @@ import { useQuery } from '@tanstack/react-query';
 import useMembers from '../../../hooks/useMembers';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import useApartmentCount from '../../../hooks/useApartmentCount';
+import { Helmet } from 'react-helmet';
 
 const AdminProfile = () => {
   const axiosPublic = useAxiosPublic();
@@ -70,6 +71,9 @@ const AdminProfile = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Sky View | Dashboard - Admin Profile</title>
+      </Helmet>
       <div className=" md:py-24 py-6">
         <div className="flex flex-col justify-center md:max-w-[80%] mx-auto p-6 shadow-md rounded-xl sm:px-12 bg-[#EEF5F9] dark:text-gray-800">
           <div className="bg-[#405189] h-36 rounded-t-xl relative">

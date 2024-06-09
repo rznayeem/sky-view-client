@@ -4,6 +4,7 @@ import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
 import useMembers from '../../../hooks/useMembers';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet';
 
 const ManageMembers = () => {
   const axiosSecure = useAxiosSecure();
@@ -37,6 +38,9 @@ const ManageMembers = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Sky View | Dashboard - Manage Members</title>
+      </Helmet>
       <div className=" py-28">
         <div className="overflow-x-auto mx-auto rounded-2xl shadow-sm md:w-[70%] bg-white">
           <table className="table overflow-hidden lg:text-[16px]">

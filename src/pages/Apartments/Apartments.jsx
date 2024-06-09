@@ -9,6 +9,7 @@ import useApartmentCount from '../../hooks/useApartmentCount';
 import { useQuery } from '@tanstack/react-query';
 import useAxiosPublic from '../../hooks/useAxiosPublic';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet';
 
 const Apartments = () => {
   const [pageNumber, setPageNumber] = useState(1);
@@ -73,6 +74,9 @@ const Apartments = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Sky View | Apartments</title>
+      </Helmet>
       <Cover
         title={'/Apartment'}
         path={'Home'}

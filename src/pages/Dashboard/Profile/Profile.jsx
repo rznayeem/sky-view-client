@@ -5,6 +5,7 @@ import { MdOutlineBed } from 'react-icons/md';
 import { TfiRuler } from 'react-icons/tfi';
 import Timestamp from 'react-timestamp';
 import useAgreement from '../../../hooks/useAgreement';
+import { Helmet } from 'react-helmet';
 
 const Profile = () => {
   const { user } = useAuth();
@@ -14,6 +15,9 @@ const Profile = () => {
 
   return (
     <div className=" md:py-24 py-6">
+      <Helmet>
+        <title>Sky View | Dashboard - Profile</title>
+      </Helmet>
       <div className="flex flex-col justify-center lg:max-w-[80%] mx-auto p-6 shadow-md rounded-xl sm:px-12 bg-[#EEF5F9] dark:text-gray-800">
         <div className="bg-[#405189] h-36 rounded-t-xl relative">
           <img

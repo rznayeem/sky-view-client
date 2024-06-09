@@ -1,5 +1,6 @@
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
+import { Helmet } from 'react-helmet';
 
 const MakeAnnouncement = () => {
   const axiosSecure = useAxiosSecure();
@@ -29,6 +30,9 @@ const MakeAnnouncement = () => {
 
   return (
     <div className="container px-5 py-24 mx-auto flex">
+      <Helmet>
+        <title>Sky View | Dashboard - Make Announcements</title>
+      </Helmet>
       <form
         onSubmit={handleAnnouncement}
         className="lg:w-1/3 md:w-1/2 mx-auto bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative shadow-md"

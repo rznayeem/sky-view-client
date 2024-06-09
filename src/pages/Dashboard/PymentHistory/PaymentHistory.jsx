@@ -5,6 +5,7 @@ import { useQuery } from '@tanstack/react-query';
 import useAuth from '../../../hooks/useAuth';
 import { useState } from 'react';
 import Cover from '../../Shared/Cover/Cover';
+import { Helmet } from 'react-helmet';
 
 const PaymentHistory = () => {
   const [searchValue, setSearchValue] = useState('');
@@ -29,55 +30,56 @@ const PaymentHistory = () => {
 
   return (
     <div>
-      <div className="">
-        <div className="relative">
-          <Cover headerTitle={'Payment History'}></Cover>
-          <div className="absolute top-2/3 left-1/2 -translate-x-1/2 w-full rounded-lg max-w-lg mx-auto mb-10 shadow-md">
-            <form onSubmit={handleSearch} className="relative">
-              <input
-                className="input py-5 input-bordered h-full w-full"
-                name="search"
-                placeholder="Enter your payment month name"
-              />
-              <button className="bg-[#FF923E] absolute right-2 top-1/2  py-3 px-6 rounded-md -translate-y-1/2 w-auto h-auto min-h-0">
-                Search
-              </button>
-            </form>
-          </div>
+      <Helmet>
+        <title>Sky View | Dashboard - Payments History</title>
+      </Helmet>
+      <div className="relative">
+        <Cover headerTitle={'Payment History'}></Cover>
+        <div className="absolute top-2/3 left-1/2 -translate-x-1/2 w-full rounded-lg max-w-lg mx-auto mb-10 shadow-md">
+          <form onSubmit={handleSearch} className="relative">
+            <input
+              className="input py-5 input-bordered h-full w-full"
+              name="search"
+              placeholder="Enter your payment month name"
+            />
+            <button className="bg-[#FF923E] absolute right-2 top-1/2  py-3 px-6 rounded-md -translate-y-1/2 w-auto h-auto min-h-0">
+              Search
+            </button>
+          </form>
         </div>
-        <div className="overflow-x-auto lg:mx-16 rounded-2xl shadow-sm bg-white">
-          <table className="table w-full overflow-hidden lg:text-[16px]">
-            {/* head */}
-            <thead>
-              <tr className="text-[16px]">
-                <th></th>
-                <th>Payment Date</th>
-                <th>Rent Month</th>
-                <th>
-                  <div className="flex gap-3 items-center">
-                    <LiaMoneyCheckAltSolid />
-                    Rent
-                  </div>
-                </th>
-                <th>Transaction ID</th>
+      </div>
+      <div className="overflow-x-auto lg:mx-16 rounded-2xl shadow-sm bg-white">
+        <table className="table w-full overflow-hidden lg:text-[16px]">
+          {/* head */}
+          <thead>
+            <tr className="text-[16px]">
+              <th></th>
+              <th>Payment Date</th>
+              <th>Rent Month</th>
+              <th>
+                <div className="flex gap-3 items-center">
+                  <LiaMoneyCheckAltSolid />
+                  Rent
+                </div>
+              </th>
+              <th>Transaction ID</th>
+            </tr>
+          </thead>
+          <tbody>
+            {/* row 1 */}
+            {payments.map((payment, idx) => (
+              <tr className="hover" key={idx}>
+                <td>{idx + 1}</td>
+                <td>
+                  <Timestamp date={payment.date}></Timestamp>
+                </td>
+                <td>{payment.month}</td>
+                <td>${payment.rent}</td>
+                <td className="text-[16px]">{payment.transactionID}</td>
               </tr>
-            </thead>
-            <tbody>
-              {/* row 1 */}
-              {payments.map((payment, idx) => (
-                <tr className="hover" key={idx}>
-                  <td>{idx + 1}</td>
-                  <td>
-                    <Timestamp date={payment.date}></Timestamp>
-                  </td>
-                  <td>{payment.month}</td>
-                  <td>${payment.rent}</td>
-                  <td className="text-[16px]">{payment.transactionID}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );

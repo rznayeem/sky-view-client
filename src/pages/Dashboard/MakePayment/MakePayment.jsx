@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useAgreement from '../../../hooks/useAgreement';
 import { FaDollarSign } from 'react-icons/fa';
+import { Helmet } from 'react-helmet';
 
 const MakePayment = () => {
   const [, agreement] = useAgreement();
@@ -35,6 +36,9 @@ const MakePayment = () => {
 
   return (
     <div className="py-24">
+      <Helmet>
+        <title>Sky View | Dashboard - Make Payment</title>
+      </Helmet>
       <div className="card shrink-0 w-full mx-auto max-w-3xl shadow-2xl bg-base-100">
         <form className="card-body">
           <div className="form-control">

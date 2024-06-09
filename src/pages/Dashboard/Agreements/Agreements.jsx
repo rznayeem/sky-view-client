@@ -10,6 +10,7 @@ import { VscDiffRenamed } from 'react-icons/vsc';
 import Timestamp from 'react-timestamp';
 import { LiaMoneyCheckAltSolid } from 'react-icons/lia';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet';
 
 const Agreements = () => {
   const axiosSecure = useAxiosSecure();
@@ -67,6 +68,9 @@ const Agreements = () => {
 
   return (
     <div className="">
+      <Helmet>
+        <title>Sky View | Dashboard - Agreement Requests</title>
+      </Helmet>
       <div className=" py-28">
         <div className="overflow-x-auto lg:mx-16 rounded-2xl shadow-sm bg-white">
           <table className="table w-full overflow-hidden lg:text-[16px]">

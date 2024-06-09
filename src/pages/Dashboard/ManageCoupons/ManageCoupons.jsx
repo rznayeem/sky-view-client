@@ -4,6 +4,7 @@ import { RiCoupon4Fill } from 'react-icons/ri';
 import { FaPercent } from 'react-icons/fa';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet';
 
 const ManageCoupons = () => {
   const axiosSecure = useAxiosSecure();
@@ -32,6 +33,9 @@ const ManageCoupons = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Sky View | Dashboard - Manage Coupons</title>
+      </Helmet>
       <div className=" py-28">
         <div className="px-20 py-6 mx-auto flex items-center justify-between border rounded-2xl shadow-sm md:w-[70%] bg-white mb-10">
           <h1 className="font-teko text-2xl font-semibold">Add a new coupon</h1>
