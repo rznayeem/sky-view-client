@@ -11,3 +11,19 @@
   font-size: 20px;
   font-weight: 700;
 }
+
+.leaflet-container {
+  width: 100vw;
+  height: 60vh;
+}
+
+.leaflet-control {
+  z-index: 0 !important;
+}
+.leaflet-pane {
+  z-index: 0 !important;
+}
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 0 !important;
+}
