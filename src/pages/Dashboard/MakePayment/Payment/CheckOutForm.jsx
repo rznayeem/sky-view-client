@@ -199,7 +199,7 @@ const CheckOutForm = ({ month }) => {
             }}
           />
           <button
-            className="btn btn-block mt-6 bg-[#CD8C66]"
+            className="btn btn-block mt-6 bg-[#DC8756]"
             type="submit"
             disabled={!stripe || !clientSecret}
           >

@@ -136,7 +136,7 @@ const Login = () => {
                     </label>
                   </div>
                   <div className="form-control mt-6">
-                    <button className="btn bg-[#CD8C66] text-white text-xl">
+                    <button className="btn bg-[#DC8756] text-white text-xl">
                       Login
                     </button>
                   </div>
@@ -156,11 +156,11 @@ const Login = () => {
                   onClick={handleGoogleLogin}
                   className="mx-auto border cursor-pointer flex h-[50px] w-[200px] items-center overflow-hidden rounded-full shadow-md duration-300 hover:scale-95 hover:shadow"
                 >
-                  <div className="flex h-full w-[50%] items-center bg-[#CD8C66] pl-4 text-sm text-white">
+                  <div className="flex h-full w-[50%] items-center bg-[#DC8756] pl-4 text-sm text-white">
                     Sign With
                   </div>
-                  <span className="right-0 top-0 h-0 w-0 -rotate-90 border-b-[50px] border-r-[50px] border-b-transparent border-r-[#CD8C66] group-hover:hidden"></span>
-                  <span className="pr-4 text-4xl font-bold text-[#CD8C66]">
+                  <span className="right-0 top-0 h-0 w-0 -rotate-90 border-b-[50px] border-r-[50px] border-b-transparent border-r-[#DC8756] group-hover:hidden"></span>
+                  <span className="pr-4 text-4xl font-bold text-[#DC8756]">
                     G+
                   </span>
                 </div>

@@ -17,13 +17,13 @@ const AboutBuilding = () => {
             src="https://avalonbay-avalon-communities-prod.cdn.arcpublishing.com/resizer/aX_7AaYdc6ONIwICoHPy9U-z48g=/715x486/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/avalonbay/4W4DB7GWMJC5XAIZD6GGARELBE.jpg"
             alt=""
           />
-          <div className="h-full hidden md:flex absolute -top-10 left-10 border-8 border-[#CD8C66] w-full"></div>
+          <div className="h-full hidden md:flex absolute -top-10 left-10 border-8 border-[#DC8756] w-full"></div>
         </div>
         <div className="lg:w-1/2 space-y-6">
           <h1 className="text-[#221C13] font-teko text-5xl font-medium">
             THE HIGH PREMIUM QUALITY LUXURY APARTMENTS
           </h1>
-          <h3 className="text-[#CD8C66] text-2xl font-semibold">
+          <h3 className="text-[#DC8756] text-2xl font-semibold">
             Many important brands have given us their trust
           </h3>
           <p>
@@ -51,7 +51,7 @@ const AboutBuilding = () => {
           <div className="flex justify-between">
             <div className="bg-gradient-to-l from-[#221C13]/[.3] via-[#221C13]/[.1] to-transparent w-24 h-16"></div>
             <div className="pr-6">
-              {/* <FaRulerCombined className="text-7xl text-[#CD8C66]" /> */}
+              {/* <FaRulerCombined className="text-7xl text-[#DC8756]" /> */}
               <img src={icon1} alt="" />
             </div>
           </div>
@@ -64,7 +64,7 @@ const AboutBuilding = () => {
           <div className="flex justify-between">
             <div className="bg-gradient-to-l from-[#221C13]/[.3] via-[#221C13]/[.1] to-transparent w-24 h-16"></div>
             <div className="pr-6">
-              {/* <FaRulerCombined className="text-7xl text-[#CD8C66]" /> */}
+              {/* <FaRulerCombined className="text-7xl text-[#DC8756]" /> */}
               <img src={icon2} alt="" />
             </div>
           </div>
@@ -77,7 +77,7 @@ const AboutBuilding = () => {
           <div className="flex justify-between">
             <div className="bg-gradient-to-l from-[#221C13]/[.3] via-[#221C13]/[.1] to-transparent w-24 h-16"></div>
             <div className="pr-6">
-              {/* <FaRulerCombined className="text-7xl text-[#CD8C66]" /> */}
+              {/* <FaRulerCombined className="text-7xl text-[#DC8756]" /> */}
               <img src={icon3} alt="" />
             </div>
           </div>
@@ -90,7 +90,7 @@ const AboutBuilding = () => {
           <div className="flex justify-between">
             <div className="bg-gradient-to-l from-[#221C13]/[.3] via-[#221C13]/[.1] to-transparent w-24 h-16"></div>
             <div className="pr-6">
-              {/* <FaRulerCombined className="text-7xl text-[#CD8C66]" /> */}
+              {/* <FaRulerCombined className="text-7xl text-[#DC8756]" /> */}
               <img src={icon4} alt="" />
             </div>
           </div>

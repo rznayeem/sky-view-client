@@ -200,8 +200,8 @@ const Apartments = () => {
                 setPageNumber(item + 1);
               }}
               className={`cursor-pointer shadow-md border hover:scale-110 scale-100 transition-all duration-200 px-5 ${
-                pageNumber === item + 1 ? 'bg-sky-500 text-white' : 'bg-white'
-              } border-sky-300  font-semibold text-gray-700   py-3 rounded-full`}
+                pageNumber === item + 1 ? 'bg-[#DC8756] text-white' : 'bg-white'
+              } border-[#e17b3f]  font-semibold text-gray-700   py-3 rounded-full`}
               key={item}
             >
               {item + 1}

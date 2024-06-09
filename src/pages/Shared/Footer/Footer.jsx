@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
           <Link
             to={'/'}
-            className="mx-auto  bg-white/[.3] border-2 border-[#2AB3FF] p-5 rounded-lg hidden lg:block"
+            className="mx-auto  bg-white/[.3] border-2 border-[#DC8756] p-5 rounded-lg hidden lg:block"
           >
             <img className="max-h-[120px]" src={logo} alt="" />
           </Link>

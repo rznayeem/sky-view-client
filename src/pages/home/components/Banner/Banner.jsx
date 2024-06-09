@@ -89,7 +89,7 @@ const Banner = () => {
               {' '}
               Discover Elevated Living <br /> at{' '}
             </span>
-            <span className="text-[#2AB3FF]">
+            <span className="text-[#DC8756]">
               <Typewriter loop={5} words={['Sky View']}></Typewriter>
             </span>
           </h1>

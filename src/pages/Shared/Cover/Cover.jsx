@@ -10,7 +10,7 @@ const Cover = ({ headerTitle, title, path }) => {
         backgroundImage: `url(${header})`,
       }}
     >
-      <div className="text-center pt-24 space-y-6">
+      <div className="text-center space-y-6">
         <h1 className="text-7xl font-bold font-mercellus">{headerTitle}</h1>
         <p className=" text-2xl">
           <Link to={'/'} className="hover:text-orange-400">

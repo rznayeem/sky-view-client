@@ -21,7 +21,7 @@ const Apartment = ({ apartment, handleAgreement }) => {
   return (
     <div>
       <div>
-        <div className="relative border border-[#CD8C66]">
+        <div className="relative border border-[#DC8756]">
           <div className="overflow-hidden">
             <img
               src={image}
@@ -29,7 +29,7 @@ const Apartment = ({ apartment, handleAgreement }) => {
               className=" object-cover object-center w-full h-72 transition duration-300 ease-in-out hover:scale-110"
             />
           </div>
-          <p className="absolute top-3 left-3 bg-[#CD8C66] px-3 rounded-md text-white">
+          <p className="absolute top-3 left-3 bg-[#DC8756] px-3 rounded-md text-white">
             Floor: {floor}
           </p>
           {status === 'unavailable' && (
@@ -66,7 +66,7 @@ const Apartment = ({ apartment, handleAgreement }) => {
           <div className="flex flex-1 items-center justify-center overflow-hidden">
             <button
               onClick={() => handleAgreement(apartment, status)}
-              className="group transition ease-in-out hover:scale-110 relative z-50 h-16 w-full overflow-hidden bg-[#CD8C66] text-xl text-white duration-500"
+              className="group transition ease-in-out hover:scale-110 relative z-50 h-16 w-full overflow-hidden bg-[#DC8756] text-xl text-white duration-500"
             >
               Agreement
               <span className="absolute inset-0 z-10 flex items-center justify-center text-white opacity-0 duration-100 ease-out group-hover:opacity-100 group-hover:duration-1000">

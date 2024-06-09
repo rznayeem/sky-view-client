@@ -76,7 +76,7 @@ const AdminProfile = () => {
             <img
               src={user?.photoURL}
               alt=""
-              className="absolute -bottom-1/2 left-1/2 -translate-x-1/2 w-32 h-32 mx-auto rounded-full ring-2 ring-[#CD8C66] aspect-square"
+              className="absolute -bottom-1/2 left-1/2 -translate-x-1/2 w-32 h-32 mx-auto rounded-full ring-2 ring-[#DC8756] aspect-square"
             />
           </div>
           <hr className="mt-24" />
