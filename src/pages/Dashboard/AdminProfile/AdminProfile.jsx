@@ -16,11 +16,11 @@ const AdminProfile = () => {
   const [, members] = useMembers();
   const { count } = apartmentCount;
 
-  const { data: apartmentChecked = [] } = useQuery({
-    queryKey: ['apartmentChecked'],
+  const { data: unAvailableApartment = [] } = useQuery({
+    queryKey: ['unAvailableApartment'],
     queryFn: async () => {
-      const res = await axiosPublic.get('/apartmentChecked');
-      return res.data;
+      const res = await axiosPublic.get('/unAvailableApartment');
+      return res.data?.unavailableRooms;
     },
   });
 
@@ -32,13 +32,13 @@ const AdminProfile = () => {
     },
   });
 
-  const availableRooms = count - apartmentChecked.length;
+  const availableRooms = count - unAvailableApartment;
   const availableRoomsPercentage = (availableRooms / count) * 100;
-  const unAvailableRoomsPercentage = (apartmentChecked.length / count) * 100;
+  const unAvailableRoomsPercentage = (unAvailableApartment / count) * 100;
 
   const data = [
     { name: 'Group A', value: availableRooms },
-    { name: 'Group B', value: apartmentChecked.length },
+    { name: 'Group B', value: unAvailableApartment },
   ];
 
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
@@ -140,7 +140,7 @@ const AdminProfile = () => {
                   <div className="flex justify-between">
                     <div>
                       <h4>Available Rooms: {availableRooms}</h4>
-                      <h4>Unavailable Rooms: {apartmentChecked.length}</h4>
+                      <h4>Unavailable Rooms: {unAvailableApartment}</h4>
                     </div>
                     <div>
                       <h3 className="text-[#0AB39C]">
