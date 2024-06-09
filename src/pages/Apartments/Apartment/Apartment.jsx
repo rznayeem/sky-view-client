@@ -38,6 +38,11 @@ const Apartment = ({ apartment, handleAgreement }) => {
             </p>
           )}
 
+          <div className="flex justify-center gap-6">
+            <p>Apartment No: {apartment_no}</p>
+            <p>Block Name: {block_name}</p>
+          </div>
+
           <div className="flex items-center relative p-6 space-y-4">
             <div className="w-[50%] space-y-2">
               <h1 className="text-3xl font-teko font-semibold">{title}</h1>

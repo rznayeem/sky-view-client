@@ -15,11 +15,11 @@ const Profile = () => {
   return (
     <div className=" py-24">
       <div className="flex flex-col justify-center max-w-[80%] mx-auto p-6 shadow-md rounded-xl sm:px-12 bg-[#EEF5F9] dark:text-gray-800">
-        <div className="bg-[#CD8C66] h-36 rounded-t-xl relative">
+        <div className="bg-[#405189] h-36 rounded-t-xl relative">
           <img
             src={user?.photoURL}
             alt=""
-            className="absolute -bottom-1/2 left-1/2 -translate-x-1/2 w-32 h-32 mx-auto rounded-full ring-2 ring-[#CD8C66] aspect-square"
+            className="absolute -bottom-1/2 left-1/2 -translate-x-1/2 w-32 h-32 mx-auto rounded-full ring-2 ring-[#405189] aspect-square"
           />
         </div>
         <hr className="mt-24" />

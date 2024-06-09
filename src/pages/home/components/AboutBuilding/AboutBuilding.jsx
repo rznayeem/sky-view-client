@@ -12,14 +12,14 @@ const AboutBuilding = () => {
         title={'about our building'}
       ></HeaderTitle>
       <div className="max-w-7xl mx-auto md:flex items-center gap-20">
-        <div className="relative w-1/2">
+        <div className="relative lg:w-1/2">
           <img
             src="https://avalonbay-avalon-communities-prod.cdn.arcpublishing.com/resizer/aX_7AaYdc6ONIwICoHPy9U-z48g=/715x486/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/avalonbay/4W4DB7GWMJC5XAIZD6GGARELBE.jpg"
             alt=""
           />
-          <div className="h-full absolute -top-10 left-10 border-8 border-[#CD8C66] w-full"></div>
+          <div className="h-full hidden md:flex absolute -top-10 left-10 border-8 border-[#CD8C66] w-full"></div>
         </div>
-        <div className="w-1/2 space-y-6">
+        <div className="lg:w-1/2 space-y-6">
           <h1 className="text-[#221C13] font-teko text-5xl font-medium">
             THE HIGH PREMIUM QUALITY LUXURY APARTMENTS
           </h1>
@@ -46,8 +46,8 @@ const AboutBuilding = () => {
           </p>
         </div>
       </div>
-      <div className="max-w-7xl py-24 mx-auto grid grid-cols-4 gap-6">
-        <div className=" w-[270px] h-[210px] shadow-2xl py-10">
+      <div className="max-w-7xl py-24 mx-auto grid lg:grid-cols-4 gap-6">
+        <div className=" md:w-[270px] h-[210px] shadow-2xl py-10">
           <div className="flex justify-between">
             <div className="bg-gradient-to-l from-[#221C13]/[.3] via-[#221C13]/[.1] to-transparent w-24 h-16"></div>
             <div className="pr-6">
@@ -60,7 +60,7 @@ const AboutBuilding = () => {
             <p>Total sqft Areas</p>
           </div>
         </div>
-        <div className=" w-[270px] h-[210px] shadow-2xl py-10">
+        <div className=" md:w-[270px] h-[210px] shadow-2xl py-10">
           <div className="flex justify-between">
             <div className="bg-gradient-to-l from-[#221C13]/[.3] via-[#221C13]/[.1] to-transparent w-24 h-16"></div>
             <div className="pr-6">
@@ -73,7 +73,7 @@ const AboutBuilding = () => {
             <p>Total Car Pakings</p>
           </div>
         </div>
-        <div className=" w-[270px] h-[210px] shadow-2xl py-10">
+        <div className=" md:w-[270px] h-[210px] shadow-2xl py-10">
           <div className="flex justify-between">
             <div className="bg-gradient-to-l from-[#221C13]/[.3] via-[#221C13]/[.1] to-transparent w-24 h-16"></div>
             <div className="pr-6">
@@ -86,7 +86,7 @@ const AboutBuilding = () => {
             <p>Luxury Apartments</p>
           </div>
         </div>
-        <div className=" w-[270px] h-[210px] shadow-2xl py-10">
+        <div className=" md:w-[270px] h-[210px] shadow-2xl py-10">
           <div className="flex justify-between">
             <div className="bg-gradient-to-l from-[#221C13]/[.3] via-[#221C13]/[.1] to-transparent w-24 h-16"></div>
             <div className="pr-6">

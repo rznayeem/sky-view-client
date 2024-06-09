@@ -1,20 +1,19 @@
-import { PiBathtub } from 'react-icons/pi';
-import useAgreement from '../../../hooks/useAgreement';
 import useApartments from '../../../hooks/useApartments';
 import useAuth from '../../../hooks/useAuth';
-import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
+import { PieChart, Pie, Cell } from 'recharts';
 import useAxiosPublic from '../../../hooks/useAxiosPublic';
 import { useQuery } from '@tanstack/react-query';
 import useMembers from '../../../hooks/useMembers';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
+import useApartmentCount from '../../../hooks/useApartmentCount';
 
 const AdminProfile = () => {
   const axiosPublic = useAxiosPublic();
   const axiosSecure = useAxiosSecure();
+  const [apartmentCount] = useApartmentCount();
   const { user } = useAuth();
-  const [apartments] = useApartments();
-  const [, agreement] = useAgreement();
   const [, members] = useMembers();
+  const { count } = apartmentCount;
 
   const { data: apartmentChecked = [] } = useQuery({
     queryKey: ['apartmentChecked'],
@@ -32,10 +31,9 @@ const AdminProfile = () => {
     },
   });
 
-  const availableRooms = apartments.length - apartmentChecked.length;
-  const availableRoomsPercentage = (availableRooms / apartments.length) * 100;
-  const unAvailableRoomsPercentage =
-    (apartmentChecked.length / apartments.length) * 100;
+  const availableRooms = count - apartmentChecked.length;
+  const availableRoomsPercentage = (availableRooms / count) * 100;
+  const unAvailableRoomsPercentage = (apartmentChecked.length / count) * 100;
 
   const data = [
     { name: 'Group A', value: availableRooms },
@@ -74,7 +72,7 @@ const AdminProfile = () => {
     <div>
       <div className=" py-24">
         <div className="flex flex-col justify-center max-w-[80%] mx-auto p-6 shadow-md rounded-xl sm:px-12 bg-[#EEF5F9] dark:text-gray-800">
-          <div className="bg-[#CD8C66] h-36 rounded-t-xl relative">
+          <div className="bg-[#405189] h-36 rounded-t-xl relative">
             <img
               src={user?.photoURL}
               alt=""
@@ -134,9 +132,7 @@ const AdminProfile = () => {
               </div>
               <div className="space-y-2 text-xl">
                 <div>
-                  <h3 className="text-center">
-                    Total Rooms: {apartments.length}
-                  </h3>
+                  <h3 className="text-center">Total Rooms: {count}</h3>
                   <div className="flex justify-between">
                     <div>
                       <h4>Available Rooms: {availableRooms}</h4>

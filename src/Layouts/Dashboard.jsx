@@ -28,7 +28,7 @@ const Dashboard = () => {
               <IoMenuSharp />
             </label>
           </div>
-          <div className="bg-[#F9F3EF] min-h-screen">
+          <div className="min-h-screen">
             <Outlet></Outlet>
           </div>
         </div>
@@ -38,7 +38,7 @@ const Dashboard = () => {
             aria-label="close sidebar"
             className="drawer-overlay"
           ></label>
-          <ul className="menu p-4 w-80 min-h-full bg-[#CD8C66] text-[18px] text-white space-y-3">
+          <ul className="menu p-4 w-80 min-h-full bg-[#405189] text-[18px] text-white space-y-3">
             {/* Sidebar content here */}
             {userRole === 'admin' ? (
               <>
@@ -52,7 +52,7 @@ const Dashboard = () => {
                 <div className="divider before:bg-white after:bg-white"></div>
                 <li>
                   <NavLink to={'/dashboard/adminProfile'}>
-                    <span className="bg-white text-xl p-2 text-[#CD8C66] rounded-md shadow-lg mr-3">
+                    <span className="bg-white text-xl p-2 text-[#405189] rounded-md shadow-lg mr-3">
                       <PiUserSwitchDuotone />
                     </span>
                     My Profile
@@ -60,7 +60,7 @@ const Dashboard = () => {
                 </li>
                 <li>
                   <NavLink to={'/dashboard/manageMembers'}>
-                    <span className="bg-white text-xl p-2 text-[#CD8C66] rounded-md shadow-lg mr-3">
+                    <span className="bg-white text-xl p-2 text-[#405189] rounded-md shadow-lg mr-3">
                       <FaUsersCog />
                     </span>
                     Manage Members
@@ -68,7 +68,7 @@ const Dashboard = () => {
                 </li>
                 <li>
                   <NavLink to={'/dashboard/makeAnnouncement'}>
-                    <span className="bg-white text-xl p-2 text-[#CD8C66] rounded-md shadow-lg mr-3">
+                    <span className="bg-white text-xl p-2 text-[#405189] rounded-md shadow-lg mr-3">
                       <HiSpeakerphone />
                     </span>
                     Make Announcement
@@ -76,7 +76,7 @@ const Dashboard = () => {
                 </li>
                 <li>
                   <NavLink to={'/dashboard/agreement'}>
-                    <span className="bg-white text-xl p-2 text-[#CD8C66] rounded-md shadow-lg mr-3">
+                    <span className="bg-white text-xl p-2 text-[#405189] rounded-md shadow-lg mr-3">
                       <FaFileAlt />
                     </span>
                     Agreement Requests
@@ -84,7 +84,7 @@ const Dashboard = () => {
                 </li>
                 <li>
                   <NavLink to={'/dashboard/manageCoupons'}>
-                    <span className="bg-white text-xl p-2 text-[#CD8C66] rounded-md shadow-lg mr-3">
+                    <span className="bg-white text-xl p-2 text-[#405189] rounded-md shadow-lg mr-3">
                       <RiCoupon3Line />
                     </span>
                     Manage Coupons
@@ -103,7 +103,7 @@ const Dashboard = () => {
                 <div className="divider before:bg-white after:bg-white"></div>
                 <li>
                   <NavLink to={'/dashboard/profile'}>
-                    <span className="bg-white text-xl p-2 text-[#CD8C66] rounded-md shadow-lg mr-3">
+                    <span className="bg-white text-xl p-2 text-[#405189] rounded-md shadow-lg mr-3">
                       <PiUserSwitchDuotone />
                     </span>
                     My Profile
@@ -113,7 +113,7 @@ const Dashboard = () => {
                   <>
                     <li>
                       <NavLink to={'/dashboard/makePayment'}>
-                        <span className="bg-white text-xl p-2 text-[#CD8C66] rounded-md shadow-lg mr-3">
+                        <span className="bg-white text-xl p-2 text-[#405189] rounded-md shadow-lg mr-3">
                           <MdPayment />
                         </span>
                         Make Payment
@@ -121,7 +121,7 @@ const Dashboard = () => {
                     </li>
                     <li>
                       <NavLink to={'/dashboard/paymentHistory'}>
-                        <span className="bg-white text-xl p-2 text-[#CD8C66] rounded-md shadow-lg mr-3">
+                        <span className="bg-white text-xl p-2 text-[#405189] rounded-md shadow-lg mr-3">
                           <LuHistory />
                         </span>
                         Payment History
@@ -131,7 +131,7 @@ const Dashboard = () => {
                 )}
                 <li>
                   <NavLink to={'/dashboard/announcement'}>
-                    <span className="bg-white text-xl p-2 text-[#CD8C66] rounded-md shadow-lg mr-3">
+                    <span className="bg-white text-xl p-2 text-[#405189] rounded-md shadow-lg mr-3">
                       <HiSpeakerphone />
                     </span>
                     Announcements

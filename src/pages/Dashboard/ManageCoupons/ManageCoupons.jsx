@@ -31,7 +31,7 @@ const ManageCoupons = () => {
           <div>
             <button
               onClick={() => setOpenModal(true)}
-              className="btn bg-[#e6a47d] text-white text-xl py-2 px-5"
+              className="btn bg-[#405189] text-white text-xl py-2 px-5"
             >
               Add Coupon
             </button>
@@ -43,7 +43,7 @@ const ManageCoupons = () => {
             >
               <div
                 onClick={e_ => e_.stopPropagation()}
-                className={`absolute w-full rounded-lg backdrop-blur-sm bg-[#CD8C66]/[.5] drop-shadow-2xl sm:w-[500px] ${
+                className={`absolute w-full rounded-lg backdrop-blur-sm bg-[#405189]/[.5] drop-shadow-2xl sm:w-[500px] ${
                   openModal
                     ? 'opacity-1 translate-y-0 duration-300'
                     : '-translate-y-20 opacity-0 duration-150'

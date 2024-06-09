@@ -171,7 +171,7 @@ const CheckOutForm = ({ month }) => {
                     className="flex flex-1 border sm:text-sm rounded-l-md p-3"
                   />
                   <button
-                    className="flex btn rounded-l-none items-center px-3 sm:text-sm rounded-r-md bg-[#CD8C66] hover:bg-[#d37c4a]"
+                    className="flex btn rounded-l-none items-center px-3 sm:text-sm rounded-r-md bg-[#405189] hover:bg-[#3350b2]"
                     disabled={btnDisable}
                   >
                     Apply

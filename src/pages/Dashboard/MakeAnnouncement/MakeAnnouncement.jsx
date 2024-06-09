@@ -22,7 +22,7 @@ const MakeAnnouncement = () => {
     <div className="container px-5 py-24 mx-auto flex">
       <form
         onSubmit={handleAnnouncement}
-        className="lg:w-1/3 md:w-1/2 mx-auto bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md"
+        className="lg:w-1/3 md:w-1/2 mx-auto bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative shadow-md"
       >
         <h2 className="text-gray-900 text-center text-lg mb-1 font-medium title-font">
           Make Announcement
@@ -33,7 +33,7 @@ const MakeAnnouncement = () => {
             type="text"
             placeholder="Title"
             name="title"
-            className="w-full bg-white rounded border border-gray-300 focus:border-[#CD8C66] focus:ring-1 focus:ring-[#CD8C66] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            className="w-full bg-white rounded border border-gray-300 focus:border-[#405189] focus:ring-1 focus:ring-[#405189] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
           />
         </div>
         <label className="form-control mb-4">
@@ -46,7 +46,7 @@ const MakeAnnouncement = () => {
             name="description"
           ></textarea>
         </label>
-        <button className="text-white bg-[#CD8C66] border-0 py-2 px-6 focus:outline-none hover:bg-[#ca7442] rounded text-lg">
+        <button className="text-white bg-[#405189] border-0 py-2 px-6 focus:outline-none hover:bg-[#3d62df] rounded text-lg">
           Button
         </button>
       </form>

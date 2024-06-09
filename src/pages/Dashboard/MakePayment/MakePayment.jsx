@@ -138,7 +138,7 @@ const MakePayment = () => {
           >
             <button
               onClick={handleError}
-              className="btn bg-[#CD8C66] text-xl text-white font-semibold"
+              className="btn bg-[#405189] text-xl text-white font-semibold"
             >
               Pay
             </button>

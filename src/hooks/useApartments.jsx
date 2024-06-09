@@ -4,7 +4,7 @@ import useAxiosPublic from './useAxiosPublic';
 const useApartments = () => {
   const axiosPublic = useAxiosPublic();
 
-  const { data: apartments = [] } = useQuery({
+  const { refetch, data: apartments = [] } = useQuery({
     queryKey: ['apartments'],
     queryFn: async () => {
       const res = await axiosPublic.get('/apartment');
@@ -12,7 +12,7 @@ const useApartments = () => {
     },
   });
 
-  return [apartments];
+  return [refetch, apartments];
 };
 
 export default useApartments;
