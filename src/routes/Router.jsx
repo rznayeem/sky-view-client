@@ -17,6 +17,7 @@ import MakePayment from '../pages/Dashboard/MakePayment/MakePayment';
 import Payment from '../pages/Dashboard/MakePayment/Payment/Payment';
 import PaymentHistory from '../pages/Dashboard/PymentHistory/PaymentHistory';
 import AdminRoute from './AdminRoute';
+import MemberRoute from './MemberRoute';
 
 const router = createBrowserRouter([
   {
@@ -73,19 +74,29 @@ const router = createBrowserRouter([
         path: 'makePayment',
         element: (
           <PrivateRoute>
-            <MakePayment></MakePayment>
+            <MemberRoute>
+              <MakePayment></MakePayment>
+            </MemberRoute>
           </PrivateRoute>
         ),
       },
       {
         path: 'payment/:month',
-        element: <Payment></Payment>,
+        element: (
+          <PrivateRoute>
+            <MemberRoute>
+              <Payment></Payment>
+            </MemberRoute>
+          </PrivateRoute>
+        ),
       },
       {
         path: 'paymentHistory',
         element: (
           <PrivateRoute>
-            <PaymentHistory></PaymentHistory>
+            <MemberRoute>
+              <PaymentHistory></PaymentHistory>
+            </MemberRoute>
           </PrivateRoute>
         ),
       },
