@@ -69,8 +69,8 @@ const Login = () => {
       <div className="">
         <Cover headerTitle="Account" path={'Home'} title={'/Login'}></Cover>
         <div className="">
-          <div className="container rounded-xl lg:h-[90vh] my-10 mx-auto flex flex-col lg:flex-row-reverse">
-            <div className="text-center animate__animated animate__slideInLeft lg:w-[50%] lg:text-left">
+          <div className="container rounded-xl my-16 mx-auto flex flex-col lg:flex-row-reverse">
+            <div className="text-center lg:w-[50%] lg:text-left">
               <div className="text-center pt-12">
                 <h1 className="text-3xl font-bold pb-4">Welcome Back !</h1>
                 <p>Thank you for being with us. Please log in!</p>
@@ -79,7 +79,7 @@ const Login = () => {
                 <Lottie animationData={login} />
               </div>
             </div>
-            <div className="lg:w-[50%]  animate__animated animate__slideInRight w-full content-center p-8 rounded-xl space-y-3 font-sans mx-auto">
+            <div className="lg:w-[50%] w-full content-center p-8 rounded-xl space-y-3 font-sans mx-auto">
               <h1 className="text-3xl font-bold text-center ">Login</h1>
 
               {/* Input fields and the form started */}

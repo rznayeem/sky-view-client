@@ -56,8 +56,8 @@ const Register = () => {
         <div
         // className=" bg-[url(https://orgik-theme.myshopify.com/cdn/shop/files/testimonial_bg.jpg?v=1637662154)]"
         >
-          <div className="container lg:h-[90vh] mx-auto flex flex-col lg:flex-row">
-            <div className="text-center animate__animated animate__slideInRight lg:rounded-l-xl lg:w-[50%] lg:text-left">
+          <div className="container mx-auto my-16 flex flex-col lg:flex-row">
+            <div className="text-center lg:rounded-l-xl lg:w-[50%] lg:text-left">
               <div className="text-center pt-12">
                 <h1 className="text-3xl font-bold pb-4">Join with us !</h1>
                 <p>
@@ -68,7 +68,7 @@ const Register = () => {
                 <Lottie animationData={registerLottie} />
               </div>
             </div>
-            <div className="lg:w-[50%] w-full  animate__animated animate__slideInLeft p-8 space-y-3 content-center font-sans mx-auto">
+            <div className="lg:w-[50%] w-full p-8 space-y-3 content-center font-sans mx-auto">
               <h1 className="text-3xl font-bold text-center">
                 Create your account
               </h1>
