@@ -82,7 +82,7 @@ const Apartments = () => {
         path={'Home'}
         headerTitle={'All Apartments'}
       ></Cover>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 py-24 max-w-7xl mx-auto md:m-10 m-5">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 py-24 max-w-7xl mx-auto lg:px-0 md:px-10 px-5">
         {isLoading ? (
           <>
             <div className=" p-6 rounded-md bg-white shadow-md mx-auto w-full">
