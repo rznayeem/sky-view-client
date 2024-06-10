@@ -4,7 +4,11 @@ import useAxiosPublic from './useAxiosPublic';
 const useCoupon = () => {
   const axiosPublic = useAxiosPublic();
 
-  const { refetch, data: coupons = [] } = useQuery({
+  const {
+    refetch,
+    data: coupons = [],
+    isLoading,
+  } = useQuery({
     queryKey: ['coupons'],
     queryFn: async () => {
       const res = await axiosPublic.get('/coupons');
@@ -12,7 +16,7 @@ const useCoupon = () => {
     },
   });
 
-  return [refetch, coupons];
+  return [refetch, coupons, isLoading];
 };
 
 export default useCoupon;

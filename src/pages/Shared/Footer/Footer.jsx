@@ -22,28 +22,28 @@ const Footer = () => {
                 At Sky View
               </h6>
               <p>
-                We&apos;re passionate about bringing people together through the
-                love of food. Our platform is a culinary playground where
-                foodies can explore an array of dining experiences, from cozy
-                cafes to fine dining establishments.
+                Stay connected with us through our various communication
+                channels. Whether you have inquiries about our services, want to
+                stay updated with the latest news, or simply want to reach out,
+                our dedicated team is here to assist you every step of the way.
               </p>
             </div>
             {/* <!-- Products section --> */}
             <div className="">
               <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-                Items
+                Quick Links
               </h6>
               <p className="mb-4">
-                <a className=" ">Thai</a>
+                <a className=" ">Home</a>
               </p>
               <p className="mb-4">
-                <a className=" ">Chinese</a>
+                <a className=" ">About Us</a>
               </p>
               <p className="mb-4">
-                <a className=" ">Indian</a>
+                <a className=" ">Services</a>
               </p>
               <p>
-                <a className=" ">Sea</a>
+                <a className=" ">Contact Us</a>
               </p>
             </div>
             {/* <!-- Useful links section --> */}
@@ -53,12 +53,12 @@ const Footer = () => {
               </h6>
               <p className="mb-4">
                 <Link to={'/allFoods'} className="">
-                  Pricing
+                  Apartments
                 </Link>
               </p>
               <p className="mb-4">
                 <Link to={'/allFoods'} className=" ">
-                  Purchase
+                  Pricing
                 </Link>
               </p>
               <p className="mb-4">
@@ -68,7 +68,7 @@ const Footer = () => {
               </p>
               <p>
                 <Link to={'/myOrder'} className=" ">
-                  My Order
+                  Dashboard
                 </Link>
               </p>
             </div>
@@ -138,7 +138,7 @@ const Footer = () => {
         {/* <!--Copyright section--> */}
         <div className="p-6 flex flex-col-reverse lg:flex-row justify-between text-center border-t-2">
           <div>
-            <span>© 2023 Copyright: Yum Yacht ltd.</span>
+            <span>© 2024 Sky View. All Rights Reserved.</span>
             <a className="font-semibold" href="https://tw-elements.com/"></a>
           </div>
           <div className="flex justify-center">

@@ -19,7 +19,11 @@ const Profile = () => {
         <title>Sky View | Dashboard - Profile</title>
       </Helmet>
       <div className="flex flex-col justify-center lg:max-w-[80%] mx-auto p-6 shadow-md rounded-xl sm:px-12 bg-[#EEF5F9] dark:text-gray-800">
-        <div className="bg-[#405189] h-36 rounded-t-xl relative">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="500"
+          className="bg-[#405189] h-36 rounded-t-xl relative"
+        >
           <img
             src={user?.photoURL}
             alt=""
@@ -28,7 +32,12 @@ const Profile = () => {
         </div>
         <hr className="mt-24" />
         <div className="w-full lg:grid grid-cols-7 gap-6">
-          <div className="my-2 col-span-3 bg-white rounded-lg shadow-md p-7 space-y-5">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-sine"
+            className="my-2 col-span-3 bg-white rounded-lg shadow-md p-7 space-y-5"
+          >
             <h1 className="font-teko text-3xl font-bold">
               Profile Information :
             </h1>
@@ -43,7 +52,12 @@ const Profile = () => {
               {userRole ? userRole : 'Basic User'}
             </p>
           </div>
-          <div className="my-2 col-span-4 bg-white rounded-lg shadow-md p-7 space-y-5">
+          <div
+            data-aos="fade-left"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-sine"
+            className="my-2 col-span-4 bg-white rounded-lg shadow-md p-7 space-y-5"
+          >
             <h1 className="font-teko text-3xl font-bold">
               Your Apartment Information :
             </h1>

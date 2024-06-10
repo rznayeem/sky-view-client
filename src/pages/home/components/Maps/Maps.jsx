@@ -1,12 +1,21 @@
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import { FaLocationDot } from 'react-icons/fa6';
 import 'leaflet/dist/leaflet.css';
+import HeaderTitle from '../../../Shared/HeaderTitle/HeaderTitle';
 
 const Maps = () => {
   return (
     <div>
       <div className="p-5 mx-auto sm:p-10 md:p-16 ">
-        <div className="flex flex-col max-w-7xl mx-auto overflow-hidden rounded">
+        <HeaderTitle
+          subTitle={'Our Location'}
+          title={'How to find us?'}
+        ></HeaderTitle>
+        <div
+          data-aos="zoom-in-down"
+          data-aos-duration="500"
+          className="flex flex-col max-w-7xl mx-auto overflow-hidden rounded"
+        >
           <div className="map">
             <MapContainer
               center={[39.97298879527249, -75.1441956779889]}

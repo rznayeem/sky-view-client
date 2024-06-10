@@ -6,15 +6,17 @@ import 'swiper/css/grid';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import { Grid, Autoplay, FreeMode, Pagination } from 'swiper/modules';
+import HeaderTitle from '../../../Shared/HeaderTitle/HeaderTitle';
 
 const Coupons = () => {
   const [, coupons] = useCoupon();
 
   return (
     <section className="max-w-7xl mx-auto mb-10 p-6 lg:p-0 flex flex-col text-center">
-      <h2 className="raleway-font text-4xl font-bold pb-12">
-        Best offers for you
-      </h2>
+      <HeaderTitle
+        subTitle={'Favorite Coupons'}
+        title={'Best offers for you'}
+      ></HeaderTitle>
       <div className="">
         <div className=" flex items-center" data-aos="fade-up">
           <div className="container mx-auto">

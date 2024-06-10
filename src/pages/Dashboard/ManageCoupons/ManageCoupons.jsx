@@ -9,7 +9,7 @@ import { Helmet } from 'react-helmet';
 const ManageCoupons = () => {
   const axiosSecure = useAxiosSecure();
   const [openModal, setOpenModal] = useState(false);
-  const [refetch, coupons] = useCoupon();
+  const [refetch, coupons, isLoading] = useCoupon();
 
   const handleCoupon = e => {
     e.preventDefault();
@@ -154,34 +154,114 @@ const ManageCoupons = () => {
           </div>
         </div>
         <div className="overflow-x-auto mx-auto rounded-2xl shadow-sm md:w-[70%] bg-white">
-          <table className="table overflow-hidden lg:text-[16px]">
-            {/* head */}
-            <thead>
-              <tr className="text-[16px]">
-                <th></th>
-                <th className="py-6">Coupon code</th>
-                <th>
-                  <div className="flex gap-3 items-center">Discount</div>
-                </th>
-                <th>
-                  <div className="flex gap-3 items-center">
-                    Coupon Description
-                  </div>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {/* row 1 */}
-              {coupons.map((coupon, idx) => (
-                <tr className="hover" key={idx}>
-                  <td>{idx + 1}</td>
-                  <td>{coupon.coupon_code}</td>
-                  <td>{coupon.discount_percentage}%</td>
-                  <td>{coupon.description}</td>
+          {isLoading ? (
+            <table className="w-full bg-white animate-pulse table overflow-hidden lg:text-[16px]">
+              {/* User profile  Skeleton */}
+              <thead className="">
+                <tr>
+                  <th>
+                    <div className="w-full rounded-full bg-gray-300 h-[40px] mb-3"></div>
+                  </th>
+                  <th>
+                    <div className="w-full rounded-full bg-gray-300 h-[40px] mb-3"></div>
+                  </th>
+                  <th>
+                    <div className="w-full rounded-full bg-gray-300 h-[40px] mb-3"></div>
+                  </th>
+                  <th>
+                    <div className="w-full rounded-full bg-gray-300 h-[40px] mb-3"></div>
+                  </th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="">
+                <tr>
+                  <td>
+                    <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                  </td>
+                  <td>
+                    <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                  </td>
+                  <td>
+                    <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                  </td>
+                  <td>
+                    <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                  </td>
+                  <td>
+                    <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                  </td>
+                  <td>
+                    <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                  </td>
+                  <td>
+                    <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                  </td>
+                  <td>
+                    <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                  </td>
+                  <td>
+                    <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                  </td>
+                  <td>
+                    <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                  </td>
+                  <td>
+                    <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                  </td>
+                  <td>
+                    <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                  </td>
+                  <td>
+                    <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          ) : (
+            <table className="table overflow-hidden lg:text-[16px]">
+              {/* head */}
+              <thead>
+                <tr className="text-[16px]">
+                  <th></th>
+                  <th className="py-6">Coupon code</th>
+                  <th>
+                    <div className="flex gap-3 items-center">Discount</div>
+                  </th>
+                  <th>
+                    <div className="flex gap-3 items-center">
+                      Coupon Description
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {/* row 1 */}
+                {coupons.map((coupon, idx) => (
+                  <tr className="hover" key={idx}>
+                    <td>{idx + 1}</td>
+                    <td>{coupon.coupon_code}</td>
+                    <td>{coupon.discount_percentage}%</td>
+                    <td>{coupon.description}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
         </div>
       </div>
     </div>

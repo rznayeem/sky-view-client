@@ -9,12 +9,19 @@ import { RiCoupon3Line } from 'react-icons/ri';
 import { LuHistory } from 'react-icons/lu';
 import useRole from '../hooks/useRole';
 import { Toaster } from 'react-hot-toast';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Dashboard = () => {
   const [userRole] = useRole();
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <div className="flex">
+    <div className="flex overflow-hidden">
       <div className="drawer border lg:drawer-open">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content ">
@@ -28,7 +35,7 @@ const Dashboard = () => {
               <IoMenuSharp />
             </label>
           </div>
-          <div className="min-h-screen">
+          <div className="min-h-screen bg-[#405189]/[.1]">
             <Outlet></Outlet>
           </div>
         </div>

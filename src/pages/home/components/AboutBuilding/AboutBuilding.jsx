@@ -14,12 +14,22 @@ const AboutBuilding = () => {
       <div className="max-w-7xl mx-auto md:flex items-center gap-20">
         <div className="relative lg:w-1/2">
           <img
+            data-aos="fade-right"
+            data-aos-duration="500"
             src="https://avalonbay-avalon-communities-prod.cdn.arcpublishing.com/resizer/aX_7AaYdc6ONIwICoHPy9U-z48g=/715x486/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/avalonbay/4W4DB7GWMJC5XAIZD6GGARELBE.jpg"
             alt=""
           />
-          <div className="h-full hidden md:flex absolute -top-10 left-10 border-8 border-[#DC8756] w-full"></div>
+          <div
+            data-aos="fade-down"
+            data-aos-duration="500"
+            className="h-full hidden md:flex absolute -top-10 left-10 border-8 border-[#DC8756] w-full"
+          ></div>
         </div>
-        <div className="lg:w-1/2 space-y-6">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="500"
+          className="lg:w-1/2 space-y-6"
+        >
           <h1 className="text-[#221C13] font-teko text-5xl font-medium">
             THE HIGH PREMIUM QUALITY LUXURY APARTMENTS
           </h1>
@@ -47,54 +57,102 @@ const AboutBuilding = () => {
         </div>
       </div>
       <div className="max-w-7xl py-24 mx-auto grid lg:grid-cols-4 gap-6">
-        <div className=" md:w-[270px] h-[210px] shadow-2xl py-10">
-          <div className="flex justify-between">
+        <div
+          data-aos="zoom-in-down"
+          data-aos-duration="500"
+          className=" md:w-[270px] h-[210px] shadow-2xl py-10"
+        >
+          <div
+            data-aos="zoom-out-down"
+            data-aos-duration="500"
+            className="flex justify-between"
+          >
             <div className="bg-gradient-to-l from-[#221C13]/[.3] via-[#221C13]/[.1] to-transparent w-24 h-16"></div>
             <div className="pr-6">
               {/* <FaRulerCombined className="text-7xl text-[#DC8756]" /> */}
               <img src={icon1} alt="" />
             </div>
           </div>
-          <div className="pl-10 pt-6">
+          <div
+            data-aos="zoom-out-up"
+            data-aos-duration="500"
+            className="pl-10 pt-6"
+          >
             <h3 className="text-3xl font-bold font-teko">34,000</h3>
             <p>Total sqft Areas</p>
           </div>
         </div>
-        <div className=" md:w-[270px] h-[210px] shadow-2xl py-10">
-          <div className="flex justify-between">
+        <div
+          data-aos="zoom-in-down"
+          data-aos-duration="500"
+          className=" md:w-[270px] h-[210px] shadow-2xl py-10"
+        >
+          <div
+            data-aos="zoom-out-down"
+            data-aos-duration="500"
+            className="flex justify-between"
+          >
             <div className="bg-gradient-to-l from-[#221C13]/[.3] via-[#221C13]/[.1] to-transparent w-24 h-16"></div>
             <div className="pr-6">
               {/* <FaRulerCombined className="text-7xl text-[#DC8756]" /> */}
               <img src={icon2} alt="" />
             </div>
           </div>
-          <div className="pl-10 pt-6">
+          <div
+            data-aos="zoom-out-up"
+            data-aos-duration="500"
+            className="pl-10 pt-6"
+          >
             <h3 className="text-3xl font-bold font-teko">680</h3>
             <p>Total Car Pakings</p>
           </div>
         </div>
-        <div className=" md:w-[270px] h-[210px] shadow-2xl py-10">
-          <div className="flex justify-between">
+        <div
+          data-aos="zoom-in-down"
+          data-aos-duration="500"
+          className=" md:w-[270px] h-[210px] shadow-2xl py-10"
+        >
+          <div
+            data-aos="zoom-out-down"
+            data-aos-duration="500"
+            className="flex justify-between"
+          >
             <div className="bg-gradient-to-l from-[#221C13]/[.3] via-[#221C13]/[.1] to-transparent w-24 h-16"></div>
             <div className="pr-6">
               {/* <FaRulerCombined className="text-7xl text-[#DC8756]" /> */}
               <img src={icon3} alt="" />
             </div>
           </div>
-          <div className="pl-10 pt-6">
+          <div
+            data-aos="zoom-out-up"
+            data-aos-duration="500"
+            className="pl-10 pt-6"
+          >
             <h3 className="text-3xl font-bold font-teko">380</h3>
             <p>Luxury Apartments</p>
           </div>
         </div>
-        <div className=" md:w-[270px] h-[210px] shadow-2xl py-10">
-          <div className="flex justify-between">
+        <div
+          data-aos="zoom-in-down"
+          data-aos-duration="500"
+          className=" md:w-[270px] h-[210px] shadow-2xl py-10"
+        >
+          <div
+            data-aos="zoom-out-down"
+            data-aos-duration="500"
+            className="flex justify-between"
+          >
             <div className="bg-gradient-to-l from-[#221C13]/[.3] via-[#221C13]/[.1] to-transparent w-24 h-16"></div>
             <div className="pr-6">
               {/* <FaRulerCombined className="text-7xl text-[#DC8756]" /> */}
               <img src={icon4} alt="" />
             </div>
           </div>
-          <div className="pl-10 pt-6">
+          <div
+            data-aos="zoom-out-up"
+            data-aos-duration="500"
+            className="pl-10 pt-6"
+          >
             <h3 className="text-3xl font-bold font-teko">760</h3>
             <p>Deluxe Bedrooms</p>
           </div>

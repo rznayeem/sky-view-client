@@ -20,7 +20,12 @@ const Apartment = ({ apartment, handleAgreement }) => {
   return (
     <div>
       <div>
-        <div className="relative border border-[#DC8756]">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-easing="ease-in-sine"
+          className="relative border border-[#DC8756]"
+        >
           <div className=" relative overflow-hidden">
             <img
               src={image}

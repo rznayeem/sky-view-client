@@ -35,6 +35,7 @@ const PaymentHistory = () => {
       </Helmet>
       <div className="relative">
         <Cover headerTitle={'Payment History'}></Cover>
+
         <div className="absolute top-2/3 left-1/2 -translate-x-1/2 w-full rounded-lg max-w-lg mx-auto mb-10 shadow-md">
           <form onSubmit={handleSearch} className="relative">
             <input
@@ -48,38 +49,118 @@ const PaymentHistory = () => {
           </form>
         </div>
       </div>
-      <div className="overflow-x-auto lg:mx-16 rounded-2xl shadow-sm bg-white">
-        <table className="table w-full overflow-hidden lg:text-[16px]">
-          {/* head */}
-          <thead>
-            <tr className="text-[16px]">
-              <th></th>
-              <th>Payment Date</th>
-              <th>Rent Month</th>
-              <th>
-                <div className="flex gap-3 items-center">
-                  <LiaMoneyCheckAltSolid />
-                  Rent
-                </div>
-              </th>
-              <th>Transaction ID</th>
-            </tr>
-          </thead>
-          <tbody>
-            {/* row 1 */}
-            {payments.map((payment, idx) => (
-              <tr className="hover" key={idx}>
-                <td>{idx + 1}</td>
-                <td>
-                  <Timestamp date={payment.date}></Timestamp>
-                </td>
-                <td>{payment.month}</td>
-                <td>${payment.rent}</td>
-                <td className="text-[16px]">{payment.transactionID}</td>
+      <div className="overflow-x-auto shadow-sm bg-white">
+        {isLoading ? (
+          <table className="w-full bg-white animate-pulse table overflow-hidden lg:text-[16px]">
+            {/* User profile  Skeleton */}
+            <thead className="">
+              <tr>
+                <th>
+                  <div className="w-full rounded-full bg-gray-300 h-[40px] mb-3"></div>
+                </th>
+                <th>
+                  <div className="w-full rounded-full bg-gray-300 h-[40px] mb-3"></div>
+                </th>
+                <th>
+                  <div className="w-full rounded-full bg-gray-300 h-[40px] mb-3"></div>
+                </th>
+                <th>
+                  <div className="w-full rounded-full bg-gray-300 h-[40px] mb-3"></div>
+                </th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody className="">
+              <tr>
+                <td>
+                  <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                </td>
+                <td>
+                  <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                </td>
+                <td>
+                  <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                </td>
+                <td>
+                  <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                </td>
+                <td>
+                  <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                </td>
+                <td>
+                  <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                </td>
+                <td>
+                  <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                </td>
+                <td>
+                  <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                </td>
+                <td>
+                  <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                </td>
+                <td>
+                  <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                </td>
+                <td>
+                  <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                </td>
+                <td>
+                  <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                </td>
+                <td>
+                  <div className="w-full rounded-full bg-gray-300 h-[15px] mb-3"></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        ) : (
+          <table className="table w-full overflow-hidden lg:text-[16px]">
+            {/* head */}
+            <thead>
+              <tr className="text-[16px]">
+                <th></th>
+                <th>Payment Date</th>
+                <th>Rent Month</th>
+                <th>
+                  <div className="flex gap-3 items-center">
+                    <LiaMoneyCheckAltSolid />
+                    Rent
+                  </div>
+                </th>
+                <th>Transaction ID</th>
+              </tr>
+            </thead>
+            <tbody>
+              {/* row 1 */}
+              {payments.map((payment, idx) => (
+                <tr className="hover" key={idx}>
+                  <td>{idx + 1}</td>
+                  <td>
+                    <Timestamp date={payment.date}></Timestamp>
+                  </td>
+                  <td>{payment.month}</td>
+                  <td>${payment.rent}</td>
+                  <td className="text-[16px]">{payment.transactionID}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
       </div>
     </div>
   );
