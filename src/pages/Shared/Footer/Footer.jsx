@@ -10,7 +10,7 @@ const Footer = () => {
             to={'/'}
             className="mx-auto  bg-white/[.3] border-2 border-[#DC8756] p-5 rounded-lg hidden lg:block"
           >
-            <img className="max-h-[120px]" src={logo} alt="" />
+            <img className="max-h-24" src={logo} alt="" />
           </Link>
         </div>
 
