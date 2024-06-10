@@ -11,9 +11,11 @@ const Home = () => {
         <title>Sky View | Home</title>
       </Helmet>
       <Banner></Banner>
-      <AboutBuilding></AboutBuilding>
-      <Coupons></Coupons>
-      <Maps></Maps>
+      <div className="md:mx-10 mx-5">
+        <AboutBuilding></AboutBuilding>
+        <Coupons></Coupons>
+        <Maps></Maps>
+      </div>
     </div>
   );
 };

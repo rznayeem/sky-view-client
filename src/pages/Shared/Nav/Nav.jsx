@@ -22,7 +22,7 @@ const Nav = () => {
   );
 
   return (
-    <div className="navbar fixed bg-black/[.5] z-50 md:px-14 mx-auto h-28">
+    <div className="navbar fixed bg-black/[.5] z-50 md:px-14 mx-auto lg:h-24 md:h-20">
       <div className="navbar-start">
         <div data-aos="fade-down" className="dropdown">
           <div
