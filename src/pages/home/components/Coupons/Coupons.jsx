@@ -62,7 +62,7 @@ const Coupons = () => {
             >
               {coupons.map(coupon => (
                 <SwiperSlide key={coupon._id}>
-                  <div className="relative flex justify-between items-center py-14 px-7 bg-gradient-to-b from-[#DC8756] via-[#DC8756]/[.8] to-[#DC8756] rounded-3xl bg-no-repeat bg-[center]">
+                  <div className="relative md:flex justify-between items-center py-14 px-7 bg-gradient-to-b from-[#DC8756] via-[#DC8756]/[.8] to-[#DC8756] rounded-3xl bg-no-repeat bg-[center]">
                     <div
                       className="absolute left-2/3 top-0 -translate-x-2/3 h-full w-full bg-no-repeat bg-center hidden lg:flex"
                       style={{

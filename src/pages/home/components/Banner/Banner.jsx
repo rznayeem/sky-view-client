@@ -36,14 +36,14 @@ const Banner = () => {
       <div className="lg:h-[100vh] md:h-[100vh] sm:h-[50vh]">
         <button
           onClick={prevSlider}
-          className="absolute lg:top-1/2 md:top-1/2 top-1/4 left-3 z-50 flex justify-center items-center rounded-full w-12 h-12 md:w-20 md:h-20"
+          className="absolute lg:top-1/2 md:top-1/2 top-1/2 left-3 z-50 flex justify-center items-center rounded-full w-12 h-12 md:w-20 md:h-20"
         >
           <Lottie className="-rotate-90" animationData={arrow}></Lottie>
         </button>
         {/* arrow right */}
         <button
           onClick={nextSlider}
-          className="absolute lg:top-1/2 md:top-1/2 top-1/4 z-[50] right-3  flex justify-center items-center rounded-full w-12 h-12 md:w-20 md:h-20"
+          className="absolute lg:top-1/2 md:top-1/2 top-1/2 z-[50] right-3  flex justify-center items-center rounded-full w-12 h-12 md:w-20 md:h-20"
         >
           <Lottie className="rotate-90" animationData={arrow}></Lottie>
         </button>
