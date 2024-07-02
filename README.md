@@ -12,26 +12,13 @@ rights.
 
 ## Features
 
-- User Agreement Application: Users can apply for an available apartment
-  agreement. Each user can apply only once.
 - Dashboard Access: A personalized dashboard for each user role (User, Member,
   Admin) to manage respective functionalities.
 - Payment Management: Members can make their monthly rent payments through the
   dashboard.
-- Payment History: Members can view their entire payment history and use a
-  search field to filter payments by month.
-- Agreement Management: Admins can accept or reject agreement requests from
-  users.
-- Member Management: Admins can delete members from the system through the
+- Agreement & Member Management: Admins can accept or reject agreement requests from
+  users delete members from the system through the
   manage members section.
-- Coupon Management: Admins can add and manage discount coupons in the manage
-  coupon section.
-- Announcements: Admins can add important announcements through the manage
-  announcement section.
-- User Roles: Clear distinction and functionalities for User, Member, and Admin
-  roles on manage member section.
-- Responsive Design: The website is fully responsive and works seamlessly across
-  different devices.
 
 ## Technologies Used
 
