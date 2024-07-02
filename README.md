@@ -12,8 +12,6 @@ rights.
 
 ## Features
 
-- This is a website of Single Building Management & my assignment category was
-  00012
 - User Agreement Application: Users can apply for an available apartment
   agreement. Each user can apply only once.
 - Dashboard Access: A personalized dashboard for each user role (User, Member,
